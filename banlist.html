@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Banlist</title>
+  <style type="text/css">
+  	body{
+  		padding: 5px;
+  		margin: 0px;
+  		background-color: #FF3CAC;
+			background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  	}
+  	div{
+  		margin: 1px;
+  		padding: 1px;
+  		
+  	}
+  	.preview{
+  		float: left;
+  		height: 480px;
+  		margin-right: 33px;
+  	}
+    .zoom{width:60px;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/custom.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<img class="preview" src="images/createcard.jpg">
+	<b>FORBBIDEN</b>
+  <div class="forbbiden" id="myDIV"></div>   
+  <b>LIMITED</b>
+	<div class="limited" id="myDIV2"></div>  
+	<b>SEMI</b>
+	<div class="semi" id="myDIV3"></div>  
+</body>
+<script type="text/javascript">
+    let carta = document.createElement('img');     
+    for (const fruit of forbd) {
+			console.log(fruit);
+			carta = document.createElement('img');
+			carta.src = "https://ygoprodeck.com/pics/" + fruit + ".jpg"
+			carta.className = "zoom"
+			document.getElementById("myDIV").appendChild(carta);
+		}
+		for (const fruit of lmtd) {
+			console.log(fruit);
+			carta = document.createElement('img');
+			carta.src = "https://ygoprodeck.com/pics/" + fruit + ".jpg"
+			carta.className = "zoom"
+			document.getElementById("myDIV2").appendChild(carta);
+		}
+		for (const fruit of semi) {
+			console.log(fruit);
+			carta = document.createElement('img');
+			carta.src = "https://ygoprodeck.com/pics/" + fruit + ".jpg"
+			carta.className = "zoom"
+			document.getElementById("myDIV3").appendChild(carta);
+		}
+		$("img").click(function(){
+  		let search = $(this).attr("src").slice(5).replace(".jpg","");
+  		copyToClipboard(search);
+		});
+		function copyToClipboard(text) {
+  		window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+		}
+		$(".zoom").hover(function(){
+			$(".preview").attr('src',$(this).attr('src')); 
+		});
+</script>
+</html>
