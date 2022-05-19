@@ -1,71 +1,1278 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Banlist</title>
-  <style type="text/css">
-  	body{
-  		padding: 5px;
-  		margin: 0px;
-  		background-color: #FF3CAC;
-			background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-  	}
-  	div{
-  		margin: 1px;
-  		padding: 1px;
-  		
-  	}
-  	.preview{
-  		float: left;
-  		height: 480px;
-  		margin-right: 33px;
-  	}
-    .zoom{width:60px;}
+  <head>
+    <title>Banlist</title>
+    <style type="text/css">
+      body{
+      padding: 5px;
+      margin: 0px;
+      background-color: grey;
+      }
+      div{
+      margin: 1px;
+      padding: 1px;
+      display: inline-block;
+      vertical-align:top;
+      }
+      table{
+      	border: 1px solid black;
+      	display: inline-block;
+      	margin: 1px;
+      	vertical-align:top;
+      	padding: 0px;
+  		}
+  		td{
+      	border: 0px solid black;
+      	margin: 0;
+      	padding: 0px;
+      }
+      tr{
+      	border: 1px solid black;
+      	margin: 0px;
+      	padding: 0px;
+      }
+      .zoom{width:60px;}
+      .cardlist_monster{background-color: yellow;}
+      .cardlist_effect{background-color: orange;}
+      .cardlist_spell{background-color: green;}
+      .cardlist_trap{background-color: pink;}
+      .cardlist_xyz{
+      	background-color: black;
+      	color: white;
+      }
+      .cardlist_ritual{background-color: lightblue;}
+      .cardlist_fusion{background-color: purple;}
+      .cardlist_synchro{background-color: white;}
     </style>
     <script src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/custom.js"></script>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-	<img class="preview" src="images/createcard.jpg">
-	<b>FORBBIDEN</b>
-  <div class="forbbiden" id="myDIV"></div>   
-  <b>LIMITED</b>
-	<div class="limited" id="myDIV2"></div>  
-	<b>SEMI</b>
-	<div class="semi" id="myDIV3"></div>  
-</body>
-<script type="text/javascript">
+    <script src="js/custom.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <div class="forbbiden" id="myDIV">
+      <table class="cardlist centertable">
+        <tr align="center" class="cardlist_atitle">
+          <td height="40"><strong>CT</strong></td>
+          <td><strong>Card Name</strong></td>
+          <td align="center"><strong>Advanced</strong></td>
+          
+          <td><strong>Remarks</strong></td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>ARCHNEMESES    PROTOS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>BLACKWING &#8211; GOFU THE    VAGUE SHADOW</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>BLACKWING &#8211; STEAM THE    CLOAK</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>BLASTER, DRAGON RULER    OF INFERNOS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>BLOCK DRAGON</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>CYBER    JAR</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DANDYLION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DJINN    RELEASER OF RITUALS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>ECLIPSE    WYVERN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>EVA</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>FIBER    JAR</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>FISHBORG    BLASTER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>GLOW-UP    BULB</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>GRINDER    GOLEM</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>LEVEL    EATER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MAGICAL    SCIENTIST</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MAJESPECTER    UNICORN &#8211; KIRIN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MASTER    PEACE, THE TRUE DRACOSLAYING KING</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MAXX    &quot;C&quot;</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MECHA    PHANTOM BEAST O-LION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MIND MASTER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>ORCUST    HARP HORROR</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>PERFORMAGE    PLUSHFIRE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>PHOENIXIAN    CLUSTER AMARYLLIS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>REDOX,    DRAGON RULER OF BOULDERS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SAMSARA    LOTUS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SPYRAL    MASTER PLAN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SUBSTITOAD</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>THE    TYRANT NEPTUNE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>TIDAL,    DRAGON RULER OF WATERFALLS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>VICTORY    DRAGON</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_fusion">
+          <td>Fusion</td>
+          <td>ELDER    ENTITY NORDEN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_fusion">
+          <td>Fusion</td>
+          <td>SUPREME    KING DRAGON STARVING VENOM</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_fusion">
+          <td>Fusion</td>
+          <td>THUNDER    DRAGON COLOSSUS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>GUARDRAGON    AGARPAIN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>GUARDRAGON    ELPY</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>HEAVYMETALFOES    ELECTRUMITE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>KNIGHTMARE    GOBLIN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>KNIGHTMARE    MERMAID</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>LINKROSS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>MECHA    PHANTOM BEAST AURORADON</td>
+          <td>Forbidden</td>
+          <td>New</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>PRANK-KIDS    MEOW-MEOW-MU</td>
+          <td>Forbidden</td>
+          <td>Was Limited</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>PREDAPLANT    VERTE ANACONDA</td>
+          <td>Forbidden</td>
+          <td>New</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>SIMORGH,    BIRD OF SOVEREIGNTY</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>SUMMON    SORCERESS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>TOPOLOGIC    GUMBLAR DRAGON</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>UNION    CARRIER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>ANCIENT    FAIRY DRAGON</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>DENGLONG,    FIRST OF THE YANG ZING</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>IB    THE WORLD CHALICE JUSTICIAR</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>TEMPEST    MAGICIAN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>LAVALVAL    CHAIN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>M-X-SABER INVOKER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>NUMBER    16: SHOCK MASTER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>NUMBER    42: GALAXY TOMAHAWK</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>NUMBER    86: HEROIC CHAMPION &#8211; RHONGOMYNIAD</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>NUMBER    95: GALAXY-EYES DARK MATTER DRAGON</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>NUMBER    S0: UTOPIC ZEXAL</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>OUTER    ENTITY AZATHOT</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>TELLARKNIGHT    PTOLEMAEUS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>TRUE    KING OF ALL CALAMITIES</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>WIND-UP    CARRIER ZENMAITY</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>ZOODIAC    BROADBULL</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>ZOODIAC    DRIDENT</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>BRILLIANT    FUSION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>BUTTERFLY    DAGGER &#8211; ELMA</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CARD    OF SAFE RETURN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CHICKEN    GAME</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>COLD WAVE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CONFISCATION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>DELINQUENT    DUO</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>DIMENSION    FUSION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>GIANT    TRUNADE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>GRACEFUL    CHARITY</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>HEAVY    STORM</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>KAISER    COLOSSEUM</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>LAST    WILL</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>MASS    DRIVER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>METAMORPHOSIS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>MIRAGE    OF NIGHTMARE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>PAINFUL    CHOICE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>POT    OF GREED</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>PREMATURE    BURIAL</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SMOKE    GRENADE OF THE THIEF</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SNATCH    STEAL</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SOUL    CHARGE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SPELLBOOK    OF JUDGMENT</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>THAT GRASS LOOKS    GREENER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>THE    FORCEFUL SENTRY</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>ZOODIAC BARRAGE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>IMPERIAL    ORDER</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>LAST    TURN</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>RETURN    FROM THE DIFFERENT DIMENSION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>ROYAL    OPPRESSION</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>SELF-DESTRUCT    BUTTON</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>SIXTH    SENSE</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>TRAP    DUSTSHOOT</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>ULTIMATE    OFFERING</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>VANITY&#8217;S    EMPTINESS</td>
+          <td>Forbidden</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <div class="limited" id="myDIV2">
+      <table class="cardlist centertable">
+        <tr align="center" class="cardlist_atitle">
+          <td height="40"><strong>CT</strong></td>
+          <td><strong>Card Name</strong></td>
+          <td align="center"><strong>Advanced</strong></td>
+          
+          <td><strong>Remarks</strong></td>
+        </tr>
+        <tr class="cardlist_monster">
+          <td>Monster</td>
+          <td>LEFT ARM OF THE    FORBIDDEN ONE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_monster">
+          <td>Monster</td>
+          <td>LEFT    LEG OF THE FORBIDDEN ONE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_monster">
+          <td>Monster</td>
+          <td>RIGHT    ARM OF THE FORBIDDEN ONE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_monster">
+          <td>Monster</td>
+          <td>RIGHT    LEG OF THE FORBIDDEN ONE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>ARMAGEDDON KNIGHT</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>ASTROGRAPH SORCERER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>BLACK DRAGON    COLLAPSERPENT</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>CYBER-STEIN</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DANGER!?    JACKALOPE?</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DANGER!?    TSUCHINOKO?</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DARK    GREPHER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DESTRUDO    THE LOST DRAGON&#8217;S FRISSON</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DINOWRESTLER    PANKRATOPS</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>EXODIA    THE FORBIDDEN ONE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>FAIRY    TAIL &#8211; SNOW</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>GENEX ALLY BIRDMAN</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>INFERNITY    ARCHFIEND</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>JET    SYNCHRON</td>
+          <td >Limited</td>
+          <td>Was    Forbidden</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>LUNALIGHT    TIGER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MISCELLANEOUSAURUS</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>MORPHING    JAR</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>PERFORMAPAL    MONKEYBOARD</td>
+          <td >Limited</td>
+          <td>Was    Forbidden</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>PHANTOM    SKYBLASTER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>RED    ROSE DRAGON</td>
+          <td >Limited</td>
+          <td>New</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SALAMANGREAT    GAZELLE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SERVANT    OF ENDYMION</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SPEEDROID    TERRORTOP</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>SPYRAL    QUIK-FIX</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>TEMPEST,    DRAGON RULER OF STORMS</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>TRUE    KING LITHOSAGYM, THE DISASTER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>WHITE    DRAGON WYVERBURSTER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>YATA-GARASU</td>
+          <td >Limited</td>
+          <td>Was Forbidden</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>ZOODIAC RATPIER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_fusion">
+          <td>Fusion</td>
+          <td>GEM-KNIGHT    MASTER DIAMOND</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>CRYSTRON    HALQIFIBRAX</td>
+          <td >Limited</td>
+          <td>New</td>
+        </tr>
+        <tr class="cardlist_link">
+          <td>Link</td>
+          <td>STRIKER    DRAGON</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>PSY-FRAMELORD    OMEGA</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>SHOOTING    RISER DRAGON</td>
+          <td >Limited</td>
+          <td>New</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>T.G.    HYPER LIBRARIAN</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>BEATRICE,    LADY OF THE ETERNAL</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>DAIGUSTO    EMERAL</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>LYRILUSC    &#8211; RECITAL STARLING</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CALLED    BY THE GRAVE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CARD DESTRUCTION</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CARD OF DEMISE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CHAIN    STRIKE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>CHANGE    OF HEART</td>
+          <td >Limited</td>
+          <td>Was Forbidden</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>DIMENSIONAL    FISSURE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>DIVINE    WIND OF MIST VALLEY</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>DRACO    FACE‐OFF</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>DRAGONIC    DIAGRAM</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>FINAL    COUNTDOWN</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>FOOLISH    BURIAL</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>GATEWAY    OF THE SIX</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>GOLD    SARCOPHAGUS</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>HARPIE&#8217;S    FEATHER DUSTER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>INFERNITY LAUNCHER</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>INSTANT FUSION</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>INTO THE VOID</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>MAGICAL    MID-BREAKER FIELD</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>MIND    CONTROL</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>MONSTER    GATE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>MONSTER    REBORN</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>ONE DAY OF PEACE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>ONE FOR ONE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>REASONING</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>REINFORCEMENT    OF THE ARMY</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SEKKA&#8217;S LIGHT</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SET ROTATION</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SKY STRIKER MECHA &#8211;    HORNET DRONES</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SKY STRIKER MECHA    MODULES &#8211; MULTIROLE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SKY    STRIKER MOBILIZE &#8211; ENGAGE!</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SLASH    DRAW</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SPYRAL    RESORT</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>TERRAFORMING</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>UPSTART GOBLIN</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>MACRO    COSMOS</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>MAGICAL    EXPLOSION</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>METAVERSE</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>RED    REBOOT</td>
+          <td >Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>TIME    SEAL</td>
+          <td >Limited</td>
+          <td>Was Forbidden</td>
+        </tr>
+      </table>
+    </div>
+    <div class="semi" id="myDIV3">
+      <table class="cardlist centertable">
+        <tr align="center" class="cardlist_atitle">
+          <td height="40"><strong>CT</strong></td>
+          <td><strong>Card Name</strong></td>
+          <td align="center"><strong>Advanced</strong></td>
+          
+          <td><strong>Remarks</strong></td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DESTINY HERO &#8211;    MALICIOUS</td>
+          <td >Semi-Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>DINOMIGHT    KNIGHT, THE TRUE DRACOFIGHTER</td>
+          <td >Semi-Limited</td>
+          <td>Was    Limited</td>
+        </tr>
+        <tr class="cardlist_ritual">
+          <td>Ritual</td>
+          <td>CYBER    ANGEL BENTEN</td>
+          <td >Semi-Limited</td>
+          <td>Was Limited</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>FIRE    FORMATION &#8211; TENKI</td>
+          <td >Semi-Limited</td>
+          <td>Was Limited</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>FUSION    DESTINY</td>
+          <td >Semi-Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>NADIR    SERVANT</td>
+          <td >Semi-Limited</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>POT OF DESIRES</td>
+          <td >Semi-Limited</td>
+          <td>Was    Limited</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>TRICKSTAR LIGHT STAGE</td>
+          <td >Semi-Limited</td>
+          <td>Was    Limited</td>
+        </tr>
+        <tr class="cardlist_trap">
+          <td>Trap</td>
+          <td>WALL    OF REVEALING LIGHT</td>
+          <td >Semi-Limited</td>
+          <td>Was Limited</td>
+        </tr>
+      </table>
+      <table class="cardlist centertable">
+        <tr align="center" class="cardlist_atitle">
+          <td height="40"><strong>CT</strong></td>
+          <td><strong>Card Name</strong></td>
+          <td align="center"><strong>Advanced</strong></td>
+          
+          <td><strong>Remarks</strong></td>
+        </tr>
+        <tr class="cardlist_effect">
+          <td>Effect</td>
+          <td>NIGHT ASSAILANT</td>
+          <td >No    Longer On List</td>
+          <td>Was Limited</td>
+        </tr>
+        <tr class="cardlist_synchro">
+          <td>Synchro</td>
+          <td>TRISHULA,    DRAGON OF THE ICE BARRIER</td>
+          <td >No    Longer On List</td>
+          <td>Was    Limited</td>
+        </tr>
+        <tr class="cardlist_xyz">
+          <td>Xyz</td>
+          <td>SALAMANGREAT    MIRAGESTALLIO</td>
+          <td >No    Longer On List</td>
+          <td>Was    Limited</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>A    HERO LIVES</td>
+          <td >No    Longer On List</td>
+          <td>Was Semi-Limited</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SALAMANGREAT    CIRCLE</td>
+          <td >No    Longer On List</td>
+          <td>Was Semi-Limited</td>
+        </tr>
+        <tr class="cardlist_spell">
+          <td>Spell</td>
+          <td>SCAPEGOAT</td>
+          <td >No    Longer On List</td>
+          <td>Was    Semi-Limited</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script type="text/javascript">
     let carta = document.createElement('img');     
-    for (const fruit of forbd) {
-			console.log(fruit);
-			carta = document.createElement('img');
-			carta.src = "https://ygoprodeck.com/pics/" + fruit + ".jpg"
-			carta.className = "zoom"
-			document.getElementById("myDIV").appendChild(carta);
-		}
-		for (const fruit of lmtd) {
-			console.log(fruit);
-			carta = document.createElement('img');
-			carta.src = "https://ygoprodeck.com/pics/" + fruit + ".jpg"
-			carta.className = "zoom"
-			document.getElementById("myDIV2").appendChild(carta);
-		}
-		for (const fruit of semi) {
-			console.log(fruit);
-			carta = document.createElement('img');
-			carta.src = "https://ygoprodeck.com/pics/" + fruit + ".jpg"
-			carta.className = "zoom"
-			document.getElementById("myDIV3").appendChild(carta);
-		}
-		$("img").click(function(){
-  		let search = $(this).attr("src").slice(5).replace(".jpg","");
-  		copyToClipboard(search);
-		});
-		function copyToClipboard(text) {
-  		window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
-		}
-		$(".zoom").hover(function(){
-			$(".preview").attr('src',$(this).attr('src')); 
-		});
-</script>
+    $("img").click(function(){
+    let search = $(this).attr("src").slice(5).replace(".jpg","");
+    copyToClipboard(search);
+    });
+    function copyToClipboard(text) {
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+    }
+    $(".zoom").hover(function(){
+    $(".preview").attr('src',$(this).attr('src')); 
+    });
+  </script>
 </html>
