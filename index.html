@@ -10,14 +10,52 @@
         margin: 20px auto;
         color: white;
 			}
+      td, tr, th{
+        border: 1px solid;
+      }
+      .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar li{display: inline;}
 			.maincon{
 				background-color: black;
 				padding:10px;
 			}
-      .abt{
-        text-align: center;
+      .abt{text-align: center;}
+      #playlist{color:blue;display:none;}
+      #games{color:lightgreen;display:none;}
+      #movies{color:hotpink;display:none;}
+      #animes{color:lightblue;display:none;}
+      #series{color:pink;display:none;}
+      #western{color:orange;display:none;}
+      #balance{display:none;}
+      .myButton {
+        box-shadow:inset 0px -3px 7px 0px #29bbff;
+        background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+        background-color:#2dabf9;
+        border-radius:3px;
+        border:1px solid #0b0e07;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        margin: 3px 1px;
+        width: 24%;
+        padding:6px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #263666;
+      }
+      .myButton:hover {
+        background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+        background-color:#0688fa;
+      }
+      .myButton:active {
+        position:relative;
+        top:1px;
       }
 		</style>
+    <script src="js/myscript.js"></script>
   </head>
   <body>
     <div class="maincon">       
@@ -28,31 +66,41 @@
           var d = new Date().toLocaleString();
           document.getElementById("demo").innerHTML = d;
         </script>
-        </div>
+      
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="tools.html">tools</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
         <p>>> translating <a href="https://myanimelist.net/anime/49831/Black%E2%98%85%E2%98%85Rock_Shooter___Dawn_Fall">Black★★Rock Shooter: Dawn Fall</a></p>
         <p>if you like my job, choose a wallet and donate any value:</p>
         <ul>
           <li>brave: 0x9B90DBBf48Bd1B9d6d67B758743B4c62EFBae0d0</li>
         </ul>
         <p style="color:yellow">my fate/go id: 611249340</p>
-      
-        <span style="color:blue">my playlist:</span>
-        <ul style="color:blue">
-          <li>Avenged Sevenfold</li>
-          <li>Iron Maiden</li>
-          <li>Hollywood Undead</li>
-          <li>Enter Shikari</li>
-          <li>Linkin Park</li>
-          <li>Dua Lipa</li>
+        <button class="myButton" onclick="myFunction('playlist')">Tog playlist</button>
+        <div id="playlist">
+        <ul>
           <li>Amon Amarth</li>
+          <li>Avenged Sevenfold</li>
+          <li>Dua Lipa</li>
+          <li>Eminem</li>
+          <li>Enter Shikari</li>
+          <li>Ghost</li>
+          <li>Hollywood Undead</li>
+          <li>Iron Maiden</li>
+          <li>Linkin Park</li>
+          <li>Sigrid</li>
+          <li>Three Days Grace</li>
           <li>Within Temptation</li>
           <li>XXXTentacion</li>
-          <li>Eminem</li>
-          <li>Three Days Grace</li>
-          <li>Ghost</li>
         </ul>
-        <span style="color:lightgreen;">my favorite games:</span>
-        <ul style="color:lightgreen;">
+        </div>
+        <button class="myButton"  onclick="myFunction('games')">Tog games</button>
+        <div id="games">
+        <ul>
           <li>
             FPS
             <ul>
@@ -104,11 +152,15 @@
             </ul>
           </li>
           <li>
-            Xbox
+            Nintendo
             <ul>
-              <li>Gears of War</li>
-              <li>Gears of War 2</li>
-              <li>Gears of War 3</li>
+              <li>Pokémon Ruby and Sapphire</li>
+              <li>Pokémon FireRed and LeafGreen</li>
+              <li>Pokémon Emerald</li>
+              <li>Pokémon Diamond and Pearl</li>
+              <li>Pokémon Platinum</li>
+              <li>Pokémon HeartGold and SoulSilver</li>
+              <li>Pokémon Battle Revolution</li>
             </ul>
           </li>
           <li>
@@ -120,26 +172,42 @@
               <li>God of War 3</li>
             </ul>
           </li>
+          <li>
+            Xbox
+            <ul>
+              <li>Gears of War</li>
+              <li>Gears of War 2</li>
+              <li>Gears of War 3</li>
+            </ul>
+          </li>
         </ul>
-        <span style="color:hotpink;">my favorite movies:</span>
-        <ul  style="color:hotpink;">
+        </div>
+        <button class="myButton"  onclick="myFunction('movies')">Tog movies</button>
+        <div id="movies">
+        <ol>
+          <li>Snow White and the Seven Dwarfs (1937)</li>
+          <li>The Wizard of Oz (1939)</li>
+          <li>Pinocchio (1940)</li>
           <li>Bambi (1942)</li>
           <li>Alice in Wonderland (1951)</li>
+          <li>Peter Pan (1953)</li>
           <li>Creature from the Black Lagoon (1954)</li>
           <li>Lady and the Tramp (1955)</li>
           <li>2001: A Space Odyssey (1968)</li>
           <li>The Exorcist (1973)</li>
           <li>Monty Python and the Holy Grail (1975)</li>
           <li>Jaws (1975)</li>
-          <li>Star Wars: Episode IV - (1977)</li>
+          <li>Star Wars: Episode IV - A New Hope (1977)</li>
           <li>Alien (1979)</li>
           <li>The Shining (1980)</li>
           <li>Star Wars: Episode V - The Empire Strikes Back (1980)</li>
           <li>Conan the Barbarian (1982)</li>
+          <li>E.T.: The Extra-Terrestrial (1982)</li>
           <li>Star Wars: Episode VI - Return of the Jedi (1983)</li>
           <li>Amadeus (1984)</li>
           <li>The Silence of the Lambs (1991)</li>
           <li>Beauty and the Beast (1991)</li>
+          <li>Aladdin (1992)</li>
           <li>Jurassic Park (1993)</li>
           <li>The Nightmare Before Christmas (1993)</li>
           <li>The Lion King (1994)</li>
@@ -149,19 +217,28 @@
           <li>101 Dalmatians (1996)</li>
           <li>Anaconda (1997)</li>
           <li>A Bug's Life (1998)</li>
+          <li>Star Wars: Episode I - The Phantom Menace (1999)</li>
           <li>Fight Club (1999)</li>
           <li>Animal Farm (1999)</li>
           <li>The Matrix (1999)</li>
           <li>The Sixth Sense (1999)</li>
           <li>Tarzan (1999)</li>
+          <li>Dinosaur (2000)</li>
+          <li>Final Destination (2000)</li>
+          <li>Chicken Run (2000)</li>
           <li>The Fast and the Furious (2001)</li>
           <li>Monsters, Inc. (2001)</li>
+          <li>Harry Potter and the Sorcerer's Stone (2001)</li>
+          <li>Shrek (2001)</li>
           <li>Dog Soldiers (2002)</li>
           <li>The Ring (2002)</li>
           <li>City of God (2002)</li>
+          <li>Spider-Man (2002)</li>
           <li>Spirit: Stallion of the Cimarron (2002)</li>
           <li>The Lord of the Rings: The Two Towers (2002)</li>
           <li>Lilo & Stitch (2002)</li>
+          <li>Star Wars: Episode II - Attack of the Clones (2002)</li>
+          <li>Harry Potter and the Chamber of Secrets (2002)</li>
           <li>2 Fast 2 Furious (2003)</li>
           <li>Kill Bill: Vol. 1 (2003)</li>
           <li>Brother Bear (2003)</li>
@@ -172,14 +249,20 @@
           <li>Alien vs. Predator (2004)</li>
           <li>Van Helsing (2004)</li>
           <li>The Village (2004)</li>
+          <li>Harry Potter and the Prisoner of Azkaban (2004)</li>
+          <li>Harry Potter and the Goblet of Fire (2005)</li>
+          <li>Star Wars: Episode III - Revenge of the Sith (2005)</li>
           <li>Batman Begins (2005)</li>
           <li>Constantine (2005)</li>
           <li>V for Vendetta (2005)</li>
           <li>Pan's Labyrinth (2006)</li>
+          <li>Pirates of the Caribbean: Dead Man's Chest (2006)</li>
           <li>Eragon (2006)</li>
           <li>The Fast and the Furious: Tokyo Drift (2006)</li>
+          <li>Harry Potter and the Order of the Phoenix (2007)</li>
           <li>Ratatouille (2007)</li>
           <li>Ghost Rider (2007)</li>
+          <li>Spider-Man 3 (2007)</li>
           <li>Transformers (2007)</li>
           <li>The Number 23 (2007)</li>
           <li>I Am Legend (2007)</li>
@@ -190,11 +273,14 @@
           <li>Jumper (2008)</li>
           <li>Wanted (2008)</li>
           <li>WALL·E (2008)</li>
+          <li>Harry Potter and the Half-Blood Prince (2009)</li>
           <li>Watchmen (2009)</li>
           <li>Coraline (2009)</li>
           <li>Inception (2010)</li>
           <li>Shutter Island (2010)</li>
+          <li>Harry Potter and the Deathly Hallows, Part 1 (2010)</li>
           <li>Megamind (2010)</li>
+          <li>Harry Potter and the Deathly Hallows, Part 2 (2011)</li>
           <li>Django Unchained (2012)</li>
           <li>The Cabin in the Woods (2012)</li>
           <li>The Dark Knight Rises (2012)</li>
@@ -212,6 +298,7 @@
           <li>Assassin's Creed (2016)</li>
           <li>Deadpool (2016)</li>
           <li>Martyrs (2016)</li>
+          <li>Rogue One: A Star Wars Story (2016)</li>
           <li>Split (2017)</li>
           <li>Ghost in the Shell (2017)</li>
           <li>Mayhem (2017)</li>
@@ -223,9 +310,11 @@
           <li>Cruella (2021)</li>
           <li>Here Are the Young Men (2021)</li>
           <li>Resident Evil: Welcome to Raccoon City (2021)</li>
-        </ul>
-        <span style="color:lightblue;">my favorite anime:</span>
-        <ul style="color:lightblue;">
+        </ol>
+        </div>
+        <button class="myButton"  onclick="myFunction('animes')">Tog animes</button>
+        <div id="animes">
+        <ul>
           <li>Ajin</li>
           <li>Angel Beats!</li>
           <li>Another</li>
@@ -253,8 +342,10 @@
           <li>Space Dandy</li>
           <li>Terra Formars</li>
         </ul>
-        <span style="color:pink;">my favorite western cartoon:</span>
-        <ul style="color:pink">
+        </div>
+        <button class="myButton"  onclick="myFunction('playlist')">Tog western</button>
+        <div id="western">
+        <ul>
           <li>Avatar: The Last Airbender</li>
           <li>The Legend of Korra</li>
           <li>RWBY</li>
@@ -263,8 +354,10 @@
           <li>The Simpsons</li>
           <li>Futurama</li>
         </ul>
-        <span style="color:orange;">my favorite series:</span>
-        <ul style="color:orange">
+        </div>
+        <button class="myButton"  onclick="myFunction('series')">Tog series</button>
+        <div id="series">
+        <ul>
           <li>Lost in Space (1967)</li>
           <li>El Chavo del 8 (1972)</li>
           <li>My Wife and Kids (2001)</li>
@@ -281,6 +374,136 @@
           <li>Loki (2021)</li>
           <li>Midnight Mass (2021)</li>     
         </ul>
+        </div>
+        <button class="myButton"  onclick="myFunction('balance')">Tog table</button>
+        <div id="balance">
+        <table>
+          <thead>
+            <tr>
+              <th >good</th>
+              <th >evil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td >bravery</td>
+              <td >fear</td>
+            </tr>
+            <tr>
+              <td >hope/faith</td>
+              <td >despair</td>
+            </tr>
+            <tr>
+              <td >victory</td>
+              <td >defeat</td>
+            </tr>
+            <tr>
+              <td >charity</td>
+              <td >greed</td>
+            </tr>
+            <tr>
+              <td >strength</td>
+              <td >weakness</td>
+            </tr>
+            <tr>
+              <td >happiness</td>
+              <td >sadness</td>
+            </tr>
+            <tr>
+              <td >love</td>
+              <td >hate</td>
+            </tr>
+            <tr>
+              <td >naive</td>
+              <td >guilty</td>
+            </tr>
+            <tr>
+              <td >pleasure</td>
+              <td >pain</td>
+            </tr>
+            <tr>
+              <td >empathy</td>
+              <td >apathy</td>
+            </tr>
+            <tr>
+              <td >sympathy</td>
+              <td >antipathy</td>
+            </tr>
+            <tr>
+              <td >sanity</td>
+              <td >insanity</td>
+            </tr>
+            <tr>
+              <td >wisdom</td>
+              <td >ignorance</td>
+            </tr>
+            <tr>
+              <td >agility</td>
+              <td >hmm</td>
+            </tr>
+            <tr>
+              <td >altruism</td>
+              <td >selfishness</td>
+            </tr>
+            <tr>
+              <td >loyalty</td>
+              <td >betrayal</td>
+            </tr>
+            <tr>
+              <td >oreos</td>
+              <td >wrath/lust/greediness/envy/vanity</td>
+            </tr>
+            <tr>
+              <td >honor/dignity</td>
+              <td >hmm</td>
+            </tr>
+            <tr>
+              <td >luck</td>
+              <td >bad luck</td>
+            </tr>
+            <tr>
+              <td >pride</td>
+              <td >pity/shame</td>
+            </tr>
+            <tr>
+              <td >freedom</td>
+              <td >hmm</td>
+            </tr>
+            <tr>
+              <td >war</td>
+              <td >peace</td>
+            </tr>
+            <tr>
+              <td >justice</td>
+              <td >injustice</td>
+            </tr>
+            <tr>
+              <td >respect</td>
+              <td >hmm</td>
+            </tr>
+            <tr>
+              <td >patience</td>
+              <td >impatience</td>
+            </tr>
+            <tr>
+              <td >kindness</td>
+              <td >hmm</td>
+            </tr>
+            <tr>
+              <td >oreos</td>
+              <td >loneliness</td>
+            </tr>
+            <tr>
+              <td >resilience</td>
+              <td >fsdfs</td>
+            </tr>
+            <tr>
+              <td >oreos</td>
+              <td >sfsf</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
       </div>
   </body>
 </html>
