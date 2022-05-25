@@ -59,6 +59,7 @@
       }
 		</style>
     <script src="js/myscript.js"></script>
+    <script src="js/ctdw.js"></script>
   </head>
   <body>
     <div class="maincon">       
@@ -69,19 +70,21 @@
           var d = new Date().toLocaleString();
           document.getElementById("demo").innerHTML = d;
         </script>
-      
         <ul class="navbar">
           <li><a href="#home">Home</a></li>
           <li><a href="tools.html">tools</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#about">About</a></li>
-          <li><a id="anonf" href="https://discord.gg/4282y8EGxP">
-         <img alt="discord" src="images/banner.png">
-        </a></li>
         </ul>
       </div>
-        <p>>> translating <a href="https://myanimelist.net/anime/49831/Black%E2%98%85%E2%98%85Rock_Shooter___Dawn_Fall">Black★★Rock Shooter: Dawn Fall</a></p>
-        <p>if you like my job, choose a wallet and donate any value:</p>
+        <a id="anonf" href="https://discord.gg/4282y8EGxP"><img alt="discord" src="images/banner.png"></a>
+        <p>
+          >> translating <a href="https://myanimelist.net/anime/49831/Black%E2%98%85%E2%98%85Rock_Shooter___Dawn_Fall">Black★★Rock Shooter: Dawn Fall</a>
+        </p>
+        <p style="color:#00ff00">
+          episode 9 in: <span id="days"></span><span id="hours"></span><span id="mins"></span><span id="secs"></span>
+        </p>
+        <p>if you like my job, choose a wallet and donate any crypto:</p>
         <ul>
           <li>brave: 0x9B90DBBf48Bd1B9d6d67B758743B4c62EFBae0d0</li>
         </ul>
@@ -91,6 +94,8 @@
         <ul>
           <li>Amon Amarth</li>
           <li>Avenged Sevenfold</li>
+          <li>Blackpink</li>
+          <li>Disturbed</li>
           <li>Dua Lipa</li>
           <li>Eminem</li>
           <li>Enter Shikari</li>
@@ -98,6 +103,8 @@
           <li>Hollywood Undead</li>
           <li>Iron Maiden</li>
           <li>Linkin Park</li>
+          <li>Metallica</li>
+          <li>Rammstein</li>
           <li>Sigrid</li>
           <li>Three Days Grace</li>
           <li>Within Temptation</li>
@@ -207,6 +214,7 @@
           <li>Alien (1979)</li>
           <li>The Shining (1980)</li>
           <li>Star Wars: Episode V - The Empire Strikes Back (1980)</li>
+          <li>The Fox and the Hound (1981)</li>
           <li>Conan the Barbarian (1982)</li>
           <li>E.T.: The Extra-Terrestrial (1982)</li>
           <li>Star Wars: Episode VI - Return of the Jedi (1983)</li>
@@ -229,6 +237,7 @@
           <li>The Matrix (1999)</li>
           <li>The Sixth Sense (1999)</li>
           <li>Tarzan (1999)</li>
+          <li>O Auto da Compadecida (2000)</li>
           <li>Dinosaur (2000)</li>
           <li>Final Destination (2000)</li>
           <li>Chicken Run (2000)</li>
@@ -238,7 +247,7 @@
           <li>Shrek (2001)</li>
           <li>Dog Soldiers (2002)</li>
           <li>The Ring (2002)</li>
-          <li>City of God (2002)</li>
+          <li>Cidade de Deus (2002)</li>
           <li>Spider-Man (2002)</li>
           <li>Spirit: Stallion of the Cimarron (2002)</li>
           <li>The Lord of the Rings: The Two Towers (2002)</li>
@@ -258,6 +267,7 @@
           <li>Harry Potter and the Prisoner of Azkaban (2004)</li>
           <li>Harry Potter and the Goblet of Fire (2005)</li>
           <li>Star Wars: Episode III - Revenge of the Sith (2005)</li>
+          <li>The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)</li>
           <li>Batman Begins (2005)</li>
           <li>Constantine (2005)</li>
           <li>V for Vendetta (2005)</li>
@@ -265,6 +275,7 @@
           <li>Pirates of the Caribbean: Dead Man's Chest (2006)</li>
           <li>Eragon (2006)</li>
           <li>The Fast and the Furious: Tokyo Drift (2006)</li>
+          <li>Tropa de Elite (2007)</li>
           <li>Harry Potter and the Order of the Phoenix (2007)</li>
           <li>Ratatouille (2007)</li>
           <li>Ghost Rider (2007)</li>
@@ -273,6 +284,8 @@
           <li>The Number 23 (2007)</li>
           <li>I Am Legend (2007)</li>
           <li>No Country for Old Men (2007)</li>
+          <li>Blindness (2008)</li>
+          <li>The Chronicles of Narnia: Prince Caspian (2008)</li>
           <li>The Dark Knight (2008)</li>
           <li>Max Payne (2008)</li>
           <li>Gran Torino (2008)</li>
@@ -284,6 +297,7 @@
           <li>Coraline (2009)</li>
           <li>Inception (2010)</li>
           <li>Shutter Island (2010)</li>
+          <li>The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)</li>
           <li>Harry Potter and the Deathly Hallows, Part 1 (2010)</li>
           <li>Megamind (2010)</li>
           <li>Harry Potter and the Deathly Hallows, Part 2 (2011)</li>
@@ -415,6 +429,7 @@
           <li>Lost in Space (1967)</li>
           <li>El Chavo del 8 (1972)</li>
           <li>My Wife and Kids (2001)</li>
+          <li>Two and a Half Men (2003)</li>
           <li>Everybody Hates Chris (2005)</li>
           <li>How I Met Your Mother (2005)</li>
           <li>The Man in the High Castle (2015)</li>
@@ -434,8 +449,8 @@
         <table>
           <thead>
             <tr>
-              <th >good</th>
-              <th >evil</th>
+              <th >light</th>
+              <th >dark</th>
             </tr>
           </thead>
           <tbody>
@@ -493,7 +508,7 @@
             </tr>
             <tr>
               <td >agility</td>
-              <td >hmm</td>
+              <td >slowness</td>
             </tr>
             <tr>
               <td >altruism</td>
@@ -504,12 +519,16 @@
               <td >betrayal</td>
             </tr>
             <tr>
-              <td >oreos</td>
-              <td >wrath/lust/greediness/envy/vanity</td>
+              <td >modesty</td>
+              <td >vanity/arrogance/ego</td>
+            </tr>
+            <tr>
+              <td >sadad</td>
+              <td >wrath/lust/envy</td>
             </tr>
             <tr>
               <td >honor/dignity</td>
-              <td >hmm</td>
+              <td >dishonor</td>
             </tr>
             <tr>
               <td >luck</td>
@@ -521,7 +540,7 @@
             </tr>
             <tr>
               <td >freedom</td>
-              <td >hmm</td>
+              <td >subjection</td>
             </tr>
             <tr>
               <td >war</td>
@@ -533,7 +552,7 @@
             </tr>
             <tr>
               <td >respect</td>
-              <td >hmm</td>
+              <td >disdain</td>
             </tr>
             <tr>
               <td >patience</td>
@@ -541,15 +560,15 @@
             </tr>
             <tr>
               <td >kindness</td>
-              <td >hmm</td>
+              <td >cruelty</td>
             </tr>
             <tr>
-              <td >oreos</td>
+              <td >family</td>
               <td >loneliness</td>
             </tr>
             <tr>
               <td >resilience</td>
-              <td >fsdfs</td>
+              <td >stubbornness</td>
             </tr>
             <tr>
               <td >oreos</td>
