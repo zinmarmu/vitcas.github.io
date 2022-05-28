@@ -2,6 +2,8 @@
 var countDownDate = new Date("May 29, 2022 11:00:00").getTime();
 // Run myfunc every second
 var myfunc = setInterval(function() {
+    var d = new Date().toLocaleString();
+    document.getElementById("demo").innerHTML = d;
     var now = new Date().getTime();
     var timeleft = countDownDate - now;
     // Calculating the days, hours, minutes and seconds left
