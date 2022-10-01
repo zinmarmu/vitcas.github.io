@@ -1,0 +1,39 @@
+body{
+  		background-color: grey;
+  	}
+  	.one{
+      border:solid 1px black;
+  		width:150px;
+  		height: 400px;
+  		display: inline-block;
+  		padding: 0px;
+  		overflow: auto;
+  		margin:0px;
+      float: left;
+      position: relative;
+  	}
+  	.row{
+  		margin: 20px;
+  		padding: 0px;
+  	}
+  	.waifus{
+  		border:solid 9px black;
+      background-color: black;
+  		width: 1520px;
+      height: 400px;
+  	}
+	  .demo {
+		border:1px solid #C0C0C0;
+		background-color: #a668a1;
+		border-collapse:collapse;
+		padding:5px;
+	}
+	.demo th {
+		border:1px solid #C0C0C0;
+		padding:5px;
+		background:#F0F0F0;
+	}
+	.demo td {
+		border:1px solid #C0C0C0;
+		padding:5px;
+	}
