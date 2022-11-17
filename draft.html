@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Draft</title>
+  <link rel="stylesheet" href="css/dummy.css">
+	<script type="text/javascript" src="js/draft.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header id="grad1">
+		patch 12.22 16/11/2022
+	</header>
+	<div class="visual">
+		<div class="clock">
+			<span>Time Azul</span>
+			<span style="margin-left:450px">Time Vermelho</span>
+		</div>
+		<div>
+			<div class="bluet">
+				<img class="bubble" src="img/square/Aatrox.png">
+				<img class="skin" style="top:75px; left:100px;" src="img/centered/Aatrox_1.jpg">
+				<img class="bubble" src="img/square/Akali.png">
+				<img class="skin" style="top:160px; left:100px;" src="img/centered/Akali_7.jpg">
+				<img class="bubble" src="img/square/Alistar.png">
+				<img class="skin" style="top:245px; left:100px;" src="img/centered/Alistar_1.jpg">
+				<img class="bubble" src="img/square/Viego.png">
+				<img class="skin" style="top:330px; left:100px;" src="img/centered/Viego_1.jpg">
+				<img class="bubble" src="img/square/Aphelios.png">
+				<img class="skin" style="top:415px; left:100px;" src="img/centered/Aphelios_1.jpg">
+			</div>
+			<div class="info">
+				<img class="destaque" src="img/load/Ashe_1.jpg">
+				<ul>
+					<li id="dano">Dano: AD</li>
+					<li id="cla1">Classe1: Atirador</li>
+					<li id="cla2">Classe2: nt</li>
+					<li id="dif">Dificuldade: $</li>
+				</ul>
+			</div>
+			<div class="redt">
+				<img class="bubble" style="top:75px; left:750px;" src="img/square/Sett.png">
+				<img class="skin2" style="top:75px; left:565px;" src="img/centered/Sett_1.jpg">
+				<img class="bubble" style="top:160px; left:750px;" src="img/square/Lux.png">
+				<img class="skin2" style="top:160px; left:565px;" src="img/centered/Lux_1.jpg">
+				<img class="bubble" style="top:245px; left:750px;" src="img/square/Vayne.png">
+				<img class="skin2" style="top:245px; left:565px;" src="img/centered/Vayne_1.jpg">
+				<img class="bubble" style="top:330px; left:750px;" src="img/square/Syndra.png">
+				<img class="skin2" style="top:330px; left:565px;" src="img/centered/Syndra_1.jpg">
+				<img class="bubble" style="top:415px; left:750px;" src="img/square/Shaco.png">
+				<img class="skin2" style="top:415px; left:565px;" src="img/centered/Shaco_1.jpg">
+			</div>
+		</div>
+		<div class="log">
+			<button onclick="myFunction()">DRAFT</button>
+			<br><br>
+			<label for="topo">TOP</label>
+			<select name="topo" id="topo">
+				<option value="volvo">Aatrox</option>
+				<option value="volvo">Akali</option>
+				<option value="volvo">Camille</option>
+				<option value="volvo">Chogath</option>
+				<option value="volvo">Darius</option>
+				<option value="volvo">DrMundo</option>
+				<option value="volvo">Fiora</option>
+				<option value="volvo">Gangplank</option>
+				<option value="volvo">Garen</option>
+				<option value="volvo">Gnar</option>
+				<option value="volvo">Gragas</option>
+				<option value="volvo">Gwen</option>
+				<option value="volvo">Illaoi</option>
+				<option value="volvo">Irelia</option>
+				<option value="volvo">Jax</option>
+				<option value="volvo">Jayce</option>
+				<option value="volvo">Kayle</option>
+				<option value="volvo">Kennen</option>
+				<option value="volvo">Kled</option>
+				<option value="volvo">KSante</option>
+				<option value="volvo">Malphite</option>
+				<option value="volvo">Mordekaiser</option>
+				<option value="volvo">Nasus</option>
+				<option value="volvo">Olaf</option>
+				<option value="volvo">Ornn</option>
+				<option value="volvo">Quinn</option>
+				<option value="volvo">Renekton</option>
+				<option value="volvo">Riven</option>
+				<option value="volvo">Rumble</option>
+				<option value="volvo">Sejuani</option>
+				<option value="volvo">Sett</option>
+				<option value="volvo">Shen</option>
+				<option value="volvo">Singed</option>
+				<option value="volvo">Sion</option>
+				<option value="volvo">TahmKench</option>
+				<option value="volvo">Teemo</option>
+				<option value="volvo">Tryndamere</option>
+				<option value="volvo">Urgot</option>
+				<option value="volvo">Volibear</option>
+				<option value="volvo">Yasuo</option>
+				<option value="volvo">Yone</option>
+				<option value="volvo">Yorick</option>
+			</select>
+			<br><br>
+			<label for="jungle">JG</label>
+			<select name="jungle" id="jungle">
+				<option value="volvo">Amumu</option>
+				<option value="volvo">Belveth</option>
+				<option value="volvo">Diana</option>
+				<option value="volvo">Ekko</option>
+				<option value="volvo">Elise</option>
+				<option value="volvo">Evelynn</option>
+				<option value="volvo">Fiddlesticks</option>
+				<option value="volvo">Graves</option>
+				<option value="volvo">Hecarim</option>
+				<option value="volvo">Ivern</option>
+				<option value="volvo">JarvanIV</option>
+				<option value="volvo">Karthus</option>
+				<option value="volvo">Kayn</option>
+				<option value="volvo">Khazix</option>
+				<option value="volvo">Kindred</option>
+				<option value="volvo">LeeSin</option>
+				<option value="volvo">Lillia</option>
+				<option value="volvo">MasterYi</option>
+				<option value="volvo">Nidalee</option>
+				<option value="volvo">Nocturne</option>
+				<option value="volvo">Nunu</option>
+				<option value="volvo">Poppy</option>
+				<option value="volvo">Rammus</option>
+				<option value="volvo">RekSai</option>
+				<option value="volvo">Rengar</option>
+				<option value="volvo">Sejuani</option>
+				<option value="volvo">Shaco</option>
+				<option value="volvo">Shyvana</option>
+				<option value="volvo">Skarner</option>
+				<option value="volvo">Taliyah</option>
+				<option value="volvo">Talon</option>
+				<option value="volvo">Trundle</option>
+				<option value="volvo">Udyr</option>
+				<option value="volvo">Vi</option>
+				<option value="volvo">Viego</option>
+				<option value="volvo">Volibear</option>
+				<option value="volvo">Warwick</option>
+				<option value="volvo">Wukong</option>
+				<option value="volvo">XinZhao</option>
+				<option value="volvo">Zac</option>
+				<option value="volvo">Zed</option>
+			</select>
+			<br><br>
+			<label for="meio">MID</label>
+			<select name="meio" id="meio">
+				<option value="volvo">Ahri</option>
+				<option value="volvo">Akali</option>
+				<option value="volvo">Akshan</option>
+				<option value="volvo">Anivia</option>
+				<option value="volvo">Annie</option>
+				<option value="volvo">AurelionSol</option>
+				<option value="volvo">Azir</option>
+				<option value="volvo">Cassiopeia</option>
+				<option value="volvo">Corki</option>
+				<option value="volvo">Ekko</option>
+				<option value="volvo">Fizz</option>
+				<option value="volvo">Galio</option>
+				<option value="volvo">Irelia</option>
+				<option value="volvo">Kassadin</option>
+				<option value="volvo">Katarina</option>
+				<option value="volvo">Leblanc</option>
+				<option value="volvo">Lissandra</option>
+				<option value="volvo">Lux</option>
+				<option value="volvo">Malzahar</option>
+				<option value="volvo">Neeko</option>
+				<option value="volvo">Orianna</option>
+				<option value="volvo">Qiyana</option>
+				<option value="volvo">Ryze</option>
+				<option value="volvo">Swain</option>
+				<option value="volvo">Sylas</option>
+				<option value="volvo">Syndra</option>
+				<option value="volvo">Taliyah</option>
+				<option value="volvo">Talon</option>
+				<option value="volvo">TwistedFate</option>
+				<option value="volvo">Varus</option>
+				<option value="volvo">Veigar</option>
+				<option value="volvo">Vex</option>
+				<option value="volvo">Viktor</option>
+				<option value="volvo">Vladimir</option>
+				<option value="volvo">Xerath</option>
+				<option value="volvo">Yasuo</option>
+				<option value="volvo">Yone</option>
+				<option value="volvo">Zed</option>
+				<option value="volvo">Ziggs</option>
+				<option value="volvo">Zoe</option>
+			</select>
+			<br><br>
+			<label for="atirador">ADC</label>
+			<select name="atirador" id="atirador">
+				<option value="volvo">Aphelios</option>
+				<option value="volvo">Ashe</option>
+				<option value="volvo">Caitlyn</option>
+				<option value="volvo">Draven</option>
+				<option value="volvo">Ezreal</option>
+				<option value="volvo">Jhin</option>
+				<option value="volvo">Jinx</option>
+				<option value="volvo">Kaisa</option>
+				<option value="volvo">Kalista</option>
+				<option value="volvo">KogMaw</option>
+				<option value="volvo">Lucian</option>
+				<option value="volvo">MissFortune</option>
+				<option value="volvo">Nilah</option>
+				<option value="volvo">Samira</option>
+				<option value="volvo">Sivir</option>
+				<option value="volvo">Tristana</option>
+				<option value="volvo">Twitch</option>
+				<option value="volvo">Varus</option>
+				<option value="volvo">Vayne</option>
+				<option value="volvo">Xayah</option>
+				<option value="volvo">Zeri</option>
+			</select>
+			<br><br>
+			<label for="suporte">SUP</label>
+			<select name="suporte" id="suporte">
+				<option value="volvo">Alistar</option>
+				<option value="volvo">Amumu</option>
+				<option value="volvo">Ashe</option>
+				<option value="volvo">Bardo</option>
+				<option value="volvo">Blitzcrank</option>
+				<option value="volvo">Brand</option>
+				<option value="volvo">Braum</option>
+				<option value="volvo">Heimerdinger</option>
+				<option value="volvo">Janna</option>
+				<option value="volvo">Karma</option>
+				<option value="volvo">Leona</option>
+				<option value="volvo">Lulu</option>
+				<option value="volvo">Lux</option>
+				<option value="volvo">Maokai</option>
+				<option value="volvo">Morgana</option>
+				<option value="volvo">Nami</option>
+				<option value="volvo">Nautilus</option>
+				<option value="volvo">Pantheon</option>
+				<option value="volvo">Pyke</option>
+				<option value="volvo">Rakan</option>
+				<option value="volvo">Rell</option>
+				<option value="volvo">Renata</option>
+				<option value="volvo">Senna</option>
+				<option value="volvo">Seraphine</option>
+				<option value="volvo">Sona</option>
+				<option value="volvo">Soraka</option>
+				<option value="volvo">Swain</option>
+				<option value="volvo">Taric</option>
+				<option value="volvo">Thresh</option>
+				<option value="volvo">Velkoz</option>
+				<option value="volvo">Xerath</option>
+				<option value="volvo">Yuumi</option>
+				<option value="volvo">Zilean</option>
+				<option value="volvo">Zyra</option>
+			</select>	
+			<p id="demo"></p>
+		</div>
+	</div>
+	<hr>
+  <div class="select">
+		<img class="mini" name="Aatrox" src="img/square/Aatrox.png">
+		<img class="mini" name="Ahri" src="img/square/Ahri.png">
+		<img class="mini" name="Akali" src="img/square/Akali.png">
+		<img class="mini" name="Akshan" src="img/square/Akshan.png">
+		<img class="mini" name="Alistar" src="img/square/Alistar.png">
+		<img class="mini" name="Amumu" src="img/square/Amumu.png">
+		<img class="mini" name="Anivia" src="img/square/Anivia.png">
+		<img class="mini" name="Annie" src="img/square/Annie.png">
+		<img class="mini" name="Aphelios" src="img/square/Aphelios.png">
+		<img class="mini" name="Ashe" src="img/square/Ashe.png">
+		<img class="mini" name="AurelionSol" src="img/square/AurelionSol.png">
+		<img class="mini" name="Azir" src="img/square/Azir.png">
+		<img class="mini" name="Bard" src="img/square/Bard.png">
+		<img class="mini" name="Belveth" src="img/square/Belveth.png">
+		<img class="mini" name="Blitzcrank" src="img/square/Blitzcrank.png">
+		<img class="mini" name="Brand" src="img/square/Brand.png">
+		<img class="mini" name="Braum" src="img/square/Braum.png">
+		<img class="mini" name="Caitlyn" src="img/square/Caitlyn.png">
+		<img class="mini" name="Camille" src="img/square/Camille.png">
+		<img class="mini" name="Cassiopeia" src="img/square/Cassiopeia.png">
+		<img class="mini" name="Chogath" src="img/square/Chogath.png">
+		<img class="mini" name="Corki" src="img/square/Corki.png">
+		<img class="mini" name="Darius" src="img/square/Darius.png">
+		<img class="mini" name="Diana" src="img/square/Diana.png">
+		<img class="mini" name="Draven" src="img/square/Draven.png">
+		<img class="mini" name="DrMundo" src="img/square/DrMundo.png">
+		<img class="mini" name="Ekko" src="img/square/Ekko.png">
+		<img class="mini" name="Elise" src="img/square/Elise.png">
+		<img class="mini" name="Evelynn" src="img/square/Evelynn.png">
+		<img class="mini" name="Ezreal" src="img/square/Ezreal.png">
+		<img class="mini" name="Fiddlesticks" src="img/square/Fiddlesticks.png">
+		<img class="mini" name="Fiora" src="img/square/Fiora.png">
+		<img class="mini" name="Fizz" src="img/square/Fizz.png">
+		<img class="mini" name="Galio" src="img/square/Galio.png">
+		<img class="mini" name="Gangplank" src="img/square/Gangplank.png">
+		<img class="mini" name="Garen" src="img/square/Garen.png">
+		<img class="mini" name="Gnar" src="img/square/Gnar.png">
+		<img class="mini" name="Gragas" src="img/square/Gragas.png">
+		<img class="mini" name="Graves" src="img/square/Graves.png">
+		<img class="mini" name="Gwen" src="img/square/Gwen.png">
+		<img class="mini" name="Hecarim" src="img/square/Hecarim.png">
+		<img class="mini" name="Heimerdinger" src="img/square/Heimerdinger.png">
+		<img class="mini" name="Illaoi" src="img/square/Illaoi.png">
+		<img class="mini" name="Irelia" src="img/square/Irelia.png">
+		<img class="mini" name="Ivern" src="img/square/Ivern.png">
+		<img class="mini" name="Janna" src="img/square/Janna.png">
+		<img class="mini" name="JarvanIV" src="img/square/JarvanIV.png">
+		<img class="mini" name="Jax" src="img/square/Jax.png">
+		<img class="mini" name="Jayce" src="img/square/Jayce.png">
+		<img class="mini" name="Jhin" src="img/square/Jhin.png">
+		<img class="mini" name="Jinx" src="img/square/Jinx.png">
+		<img class="mini" name="Kaisa" src="img/square/Kaisa.png">
+		<img class="mini" name="Kalista" src="img/square/Kalista.png">
+		<img class="mini" name="Karma" src="img/square/Karma.png">
+		<img class="mini" name="Karthus" src="img/square/Karthus.png">
+		<img class="mini" name="Kassadin" src="img/square/Kassadin.png">
+		<img class="mini" name="Katarina" src="img/square/Katarina.png">
+		<img class="mini" name="Kayle" src="img/square/Kayle.png">
+		<img class="mini" name="Kayn" src="img/square/Kayn.png">
+		<img class="mini" name="Kennen" src="img/square/Kennen.png">
+		<img class="mini" name="Khazix" src="img/square/Khazix.png">
+		<img class="mini" name="Kindred" src="img/square/Kindred.png">
+		<img class="mini" name="Kled" src="img/square/Kled.png">
+		<img class="mini" name="KogMaw" src="img/square/KogMaw.png">
+		<img class="mini" name="KSante" src="img/square/KSante.png">
+		<img class="mini" name="Leblanc" src="img/square/Leblanc.png">
+		<img class="mini" name="LeeSin" src="img/square/LeeSin.png">
+		<img class="mini" name="Leona" src="img/square/Leona.png">
+		<img class="mini" name="Lillia" src="img/square/Lillia.png">
+		<img class="mini" name="Lissandra" src="img/square/Lissandra.png">
+		<img class="mini" name="Lucian" src="img/square/Lucian.png">
+		<img class="mini" name="Lulu" src="img/square/Lulu.png">
+		<img class="mini" name="Lux" src="img/square/Lux.png">
+		<img class="mini" name="Malphite" src="img/square/Malphite.png">
+		<img class="mini" name="Malzahar" src="img/square/Malzahar.png">
+		<img class="mini" name="Maokai" src="img/square/Maokai.png">
+		<img class="mini" name="MasterYi" src="img/square/MasterYi.png">
+		<img class="mini" name="MissFortune" src="img/square/MissFortune.png">
+		<img class="mini" name="MonkeyKing" src="img/square/MonkeyKing.png">
+		<img class="mini" name="Mordekaiser" src="img/square/Mordekaiser.png">
+		<img class="mini" name="Morgana" src="img/square/Morgana.png">
+		<img class="mini" name="Nami" src="img/square/Nami.png">
+		<img class="mini" name="Nasus" src="img/square/Nasus.png">
+		<img class="mini" name="Nautilus" src="img/square/Nautilus.png">
+		<img class="mini" name="Neeko" src="img/square/Neeko.png">
+		<img class="mini" name="Nidalee" src="img/square/Nidalee.png">
+		<img class="mini" name="Nilah" src="img/square/Nilah.png">
+		<img class="mini" name="Nocturne" src="img/square/Nocturne.png">
+		<img class="mini" name="Nunu" src="img/square/Nunu.png">
+		<img class="mini" name="Olaf" src="img/square/Olaf.png">
+		<img class="mini" name="Orianna" src="img/square/Orianna.png">
+		<img class="mini" name="Ornn" src="img/square/Ornn.png">
+		<img class="mini" name="Pantheon" src="img/square/Pantheon.png">
+		<img class="mini" name="Poppy" src="img/square/Poppy.png">
+		<img class="mini" name="Pyke" src="img/square/Pyke.png">
+		<img class="mini" name="Qiyana" src="img/square/Qiyana.png">
+		<img class="mini" name="Quinn" src="img/square/Quinn.png">
+		<img class="mini" name="Rakan" src="img/square/Rakan.png">
+		<img class="mini" name="Rammus" src="img/square/Rammus.png">
+		<img class="mini" name="RekSai" src="img/square/RekSai.png">
+		<img class="mini" name="Rell" src="img/square/Rell.png">
+		<img class="mini" name="Renata" src="img/square/Renata.png">
+		<img class="mini" name="Renekton" src="img/square/Renekton.png">
+		<img class="mini" name="Rengar" src="img/square/Rengar.png">
+		<img class="mini" name="Riven" src="img/square/Riven.png">
+		<img class="mini" name="Rumble" src="img/square/Rumble.png">
+		<img class="mini" name="Ryze" src="img/square/Ryze.png">
+		<img class="mini" name="Samira" src="img/square/Samira.png">
+		<img class="mini" name="Sejuani" src="img/square/Sejuani.png">
+		<img class="mini" name="Senna" src="img/square/Senna.png">
+		<img class="mini" name="Seraphine" src="img/square/Seraphine.png">
+		<img class="mini" name="Sett" src="img/square/Sett.png">
+		<img class="mini" name="Shaco" src="img/square/Shaco.png">
+		<img class="mini" name="Shen" src="img/square/Shen.png">
+		<img class="mini" name="Shyvana" src="img/square/Shyvana.png">
+		<img class="mini" name="Singed" src="img/square/Singed.png">
+		<img class="mini" name="Sion" src="img/square/Sion.png">
+		<img class="mini" name="Sivir" src="img/square/Sivir.png">
+		<img class="mini" name="Skarner" src="img/square/Skarner.png">
+		<img class="mini" name="Sona" src="img/square/Sona.png">
+		<img class="mini" name="Soraka" src="img/square/Soraka.png">
+		<img class="mini" name="Swain" src="img/square/Swain.png">
+		<img class="mini" name="Sylas" src="img/square/Sylas.png">
+		<img class="mini" name="Syndra" src="img/square/Syndra.png">
+		<img class="mini" name="TahmKench" src="img/square/TahmKench.png">
+		<img class="mini" name="Taliyah" src="img/square/Taliyah.png">
+		<img class="mini" name="Talon" src="img/square/Talon.png">
+		<img class="mini" name="Taric" src="img/square/Taric.png">
+		<img class="mini" name="Teemo" src="img/square/Teemo.png">
+		<img class="mini" name="Thresh" src="img/square/Thresh.png">
+		<img class="mini" name="Tristana" src="img/square/Tristana.png">
+		<img class="mini" name="Trundle" src="img/square/Trundle.png">
+		<img class="mini" name="Tryndamere" src="img/square/Tryndamere.png">
+		<img class="mini" name="TwistedFate" src="img/square/TwistedFate.png">
+		<img class="mini" name="Twitch" src="img/square/Twitch.png">
+		<img class="mini" name="Udyr" src="img/square/Udyr.png">
+		<img class="mini" name="Urgot" src="img/square/Urgot.png">
+		<img class="mini" name="Varus" src="img/square/Varus.png">
+		<img class="mini" name="Vayne" src="img/square/Vayne.png">
+		<img class="mini" name="Veigar" src="img/square/Veigar.png">
+		<img class="mini" name="Velkoz" src="img/square/Velkoz.png">
+		<img class="mini" name="Vex" src="img/square/Vex.png">
+		<img class="mini" name="Vi" src="img/square/Vi.png">
+		<img class="mini" name="Viego" src="img/square/Viego.png">
+		<img class="mini" name="Viktor" src="img/square/Viktor.png">
+		<img class="mini" name="Vladimir" src="img/square/Vladimir.png">
+		<img class="mini" name="Volibear" src="img/square/Volibear.png">
+		<img class="mini" name="Warwick" src="img/square/Warwick.png">
+		<img class="mini" name="Xayah" src="img/square/Xayah.png">
+		<img class="mini" name="Xerath" src="img/square/Xerath.png">
+		<img class="mini" name="XinZhao" src="img/square/XinZhao.png">
+		<img class="mini" name="Yasuo" src="img/square/Yasuo.png">
+		<img class="mini" name="Yone" src="img/square/Yone.png">
+		<img class="mini" name="Yorick" src="img/square/Yorick.png">
+		<img class="mini" name="Yuumi" src="img/square/Yuumi.png">
+		<img class="mini" name="Zac" src="img/square/Zac.png">
+		<img class="mini" name="Zed" src="img/square/Zed.png">
+		<img class="mini" name="Zeri" src="img/square/Zeri.png">
+		<img class="mini" name="Ziggs" src="img/square/Ziggs.png">
+		<img class="mini" name="Zilean" src="img/square/Zilean.png">
+		<img class="mini" name="Zoe" src="img/square/Zoe.png">
+		<img class="mini" name="Zyra" src="img/square/Zyra.png">
+	</div>
+	<script>
+		let text1 = "img/load/";
+		let text2 = "_1.jpg"
+		$(".mini").hover(function(){
+			let aux = $(this).attr('name');
+			let obj = xampions.find(o => o.nome === aux);
+			$('#dano').text('Dano: ' + obj.dano); 
+			$('#cla1').text('Classe1: ' + obj.classe1); 
+			$('#cla2').text('Classe2: ' + obj.classe2); 
+			$('#dif').text('Dificuldade: ' + obj.dif); 
+			$(".destaque").attr('src',text1.concat($(this).attr('name'), text2)); 
+		});
+	</script>
+</body>
+</html>
