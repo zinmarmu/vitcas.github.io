@@ -18,20 +18,20 @@
 		</div>
 		<div>
 			<div class="bluet">
-				<img class="bubble" src="img/square/Aatrox.png">
+				<img id="ally1" class="bubble" src="img/square/Aatrox.png">
 				<img class="skin" style="top:75px; left:100px;" src="img/centered/Aatrox_1.jpg">
-				<img class="bubble" src="img/square/Akali.png">
+				<img id="ally2" class="bubble" src="img/square/Akali.png">
 				<img class="skin" style="top:160px; left:100px;" src="img/centered/Akali_7.jpg">
-				<img class="bubble" src="img/square/Alistar.png">
+				<img id="ally3" class="bubble" src="img/square/Alistar.png">
 				<img class="skin" style="top:245px; left:100px;" src="img/centered/Alistar_1.jpg">
-				<img class="bubble" src="img/square/Viego.png">
+				<img id="ally4" class="bubble" src="img/square/Viego.png">
 				<img class="skin" style="top:330px; left:100px;" src="img/centered/Viego_1.jpg">
-				<img class="bubble" src="img/square/Aphelios.png">
+				<img id="ally5" class="bubble" src="img/square/Aphelios.png">
 				<img class="skin" style="top:415px; left:100px;" src="img/centered/Aphelios_1.jpg">
 			</div>
 			<div class="info">
 				<img class="destaque" src="img/load/Ashe_1.jpg">
-				<ul>
+				<ul class="trunfo">
 					<li id="dano">Dano: AD</li>
 					<li id="cla1">Classe1: Atirador</li>
 					<li id="cla2">Classe2: nt</li>
@@ -39,219 +39,39 @@
 				</ul>
 			</div>
 			<div class="redt">
-				<img class="bubble" style="top:75px; left:750px;" src="img/square/Sett.png">
+				<img id="enemy1" class="bubble" style="top:75px; left:750px;" src="img/square/Sett.png">
 				<img class="skin2" style="top:75px; left:565px;" src="img/centered/Sett_1.jpg">
-				<img class="bubble" style="top:160px; left:750px;" src="img/square/Lux.png">
+				<img id="enemy2" class="bubble" style="top:160px; left:750px;" src="img/square/Lux.png">
 				<img class="skin2" style="top:160px; left:565px;" src="img/centered/Lux_1.jpg">
-				<img class="bubble" style="top:245px; left:750px;" src="img/square/Vayne.png">
+				<img id="enemy3" class="bubble" style="top:245px; left:750px;" src="img/square/Vayne.png">
 				<img class="skin2" style="top:245px; left:565px;" src="img/centered/Vayne_1.jpg">
-				<img class="bubble" style="top:330px; left:750px;" src="img/square/Syndra.png">
+				<img id="enemy4" class="bubble" style="top:330px; left:750px;" src="img/square/Syndra.png">
 				<img class="skin2" style="top:330px; left:565px;" src="img/centered/Syndra_1.jpg">
-				<img class="bubble" style="top:415px; left:750px;" src="img/square/Shaco.png">
+				<img id="enemy5" class="bubble" style="top:415px; left:750px;" src="img/square/Shaco.png">
 				<img class="skin2" style="top:415px; left:565px;" src="img/centered/Shaco_1.jpg">
 			</div>
 		</div>
 		<div class="log">
-			<button onclick="myFunction()">DRAFT</button>
+			<button id="botao1" onclick="myFunction()">DRAFT</button>
+			<button onclick="clearDraft()">CLEAR</button>
 			<br><br>
-			<label for="topo">TOP</label>
-			<select name="topo" id="topo">
-				<option value="volvo">Aatrox</option>
-				<option value="volvo">Akali</option>
-				<option value="volvo">Camille</option>
-				<option value="volvo">Chogath</option>
-				<option value="volvo">Darius</option>
-				<option value="volvo">DrMundo</option>
-				<option value="volvo">Fiora</option>
-				<option value="volvo">Gangplank</option>
-				<option value="volvo">Garen</option>
-				<option value="volvo">Gnar</option>
-				<option value="volvo">Gragas</option>
-				<option value="volvo">Gwen</option>
-				<option value="volvo">Illaoi</option>
-				<option value="volvo">Irelia</option>
-				<option value="volvo">Jax</option>
-				<option value="volvo">Jayce</option>
-				<option value="volvo">Kayle</option>
-				<option value="volvo">Kennen</option>
-				<option value="volvo">Kled</option>
-				<option value="volvo">KSante</option>
-				<option value="volvo">Malphite</option>
-				<option value="volvo">Mordekaiser</option>
-				<option value="volvo">Nasus</option>
-				<option value="volvo">Olaf</option>
-				<option value="volvo">Ornn</option>
-				<option value="volvo">Quinn</option>
-				<option value="volvo">Renekton</option>
-				<option value="volvo">Riven</option>
-				<option value="volvo">Rumble</option>
-				<option value="volvo">Sejuani</option>
-				<option value="volvo">Sett</option>
-				<option value="volvo">Shen</option>
-				<option value="volvo">Singed</option>
-				<option value="volvo">Sion</option>
-				<option value="volvo">TahmKench</option>
-				<option value="volvo">Teemo</option>
-				<option value="volvo">Tryndamere</option>
-				<option value="volvo">Urgot</option>
-				<option value="volvo">Volibear</option>
-				<option value="volvo">Yasuo</option>
-				<option value="volvo">Yone</option>
-				<option value="volvo">Yorick</option>
-			</select>
-			<br><br>
-			<label for="jungle">JG</label>
-			<select name="jungle" id="jungle">
-				<option value="volvo">Amumu</option>
-				<option value="volvo">Belveth</option>
-				<option value="volvo">Diana</option>
-				<option value="volvo">Ekko</option>
-				<option value="volvo">Elise</option>
-				<option value="volvo">Evelynn</option>
-				<option value="volvo">Fiddlesticks</option>
-				<option value="volvo">Graves</option>
-				<option value="volvo">Hecarim</option>
-				<option value="volvo">Ivern</option>
-				<option value="volvo">JarvanIV</option>
-				<option value="volvo">Karthus</option>
-				<option value="volvo">Kayn</option>
-				<option value="volvo">Khazix</option>
-				<option value="volvo">Kindred</option>
-				<option value="volvo">LeeSin</option>
-				<option value="volvo">Lillia</option>
-				<option value="volvo">MasterYi</option>
-				<option value="volvo">Nidalee</option>
-				<option value="volvo">Nocturne</option>
-				<option value="volvo">Nunu</option>
-				<option value="volvo">Poppy</option>
-				<option value="volvo">Rammus</option>
-				<option value="volvo">RekSai</option>
-				<option value="volvo">Rengar</option>
-				<option value="volvo">Sejuani</option>
-				<option value="volvo">Shaco</option>
-				<option value="volvo">Shyvana</option>
-				<option value="volvo">Skarner</option>
-				<option value="volvo">Taliyah</option>
-				<option value="volvo">Talon</option>
-				<option value="volvo">Trundle</option>
-				<option value="volvo">Udyr</option>
-				<option value="volvo">Vi</option>
-				<option value="volvo">Viego</option>
-				<option value="volvo">Volibear</option>
-				<option value="volvo">Warwick</option>
-				<option value="volvo">Wukong</option>
-				<option value="volvo">XinZhao</option>
-				<option value="volvo">Zac</option>
-				<option value="volvo">Zed</option>
-			</select>
-			<br><br>
-			<label for="meio">MID</label>
-			<select name="meio" id="meio">
-				<option value="volvo">Ahri</option>
-				<option value="volvo">Akali</option>
-				<option value="volvo">Akshan</option>
-				<option value="volvo">Anivia</option>
-				<option value="volvo">Annie</option>
-				<option value="volvo">AurelionSol</option>
-				<option value="volvo">Azir</option>
-				<option value="volvo">Cassiopeia</option>
-				<option value="volvo">Corki</option>
-				<option value="volvo">Ekko</option>
-				<option value="volvo">Fizz</option>
-				<option value="volvo">Galio</option>
-				<option value="volvo">Irelia</option>
-				<option value="volvo">Kassadin</option>
-				<option value="volvo">Katarina</option>
-				<option value="volvo">Leblanc</option>
-				<option value="volvo">Lissandra</option>
-				<option value="volvo">Lux</option>
-				<option value="volvo">Malzahar</option>
-				<option value="volvo">Neeko</option>
-				<option value="volvo">Orianna</option>
-				<option value="volvo">Qiyana</option>
-				<option value="volvo">Ryze</option>
-				<option value="volvo">Swain</option>
-				<option value="volvo">Sylas</option>
-				<option value="volvo">Syndra</option>
-				<option value="volvo">Taliyah</option>
-				<option value="volvo">Talon</option>
-				<option value="volvo">TwistedFate</option>
-				<option value="volvo">Varus</option>
-				<option value="volvo">Veigar</option>
-				<option value="volvo">Vex</option>
-				<option value="volvo">Viktor</option>
-				<option value="volvo">Vladimir</option>
-				<option value="volvo">Xerath</option>
-				<option value="volvo">Yasuo</option>
-				<option value="volvo">Yone</option>
-				<option value="volvo">Zed</option>
-				<option value="volvo">Ziggs</option>
-				<option value="volvo">Zoe</option>
-			</select>
-			<br><br>
-			<label for="atirador">ADC</label>
-			<select name="atirador" id="atirador">
-				<option value="volvo">Aphelios</option>
-				<option value="volvo">Ashe</option>
-				<option value="volvo">Caitlyn</option>
-				<option value="volvo">Draven</option>
-				<option value="volvo">Ezreal</option>
-				<option value="volvo">Jhin</option>
-				<option value="volvo">Jinx</option>
-				<option value="volvo">Kaisa</option>
-				<option value="volvo">Kalista</option>
-				<option value="volvo">KogMaw</option>
-				<option value="volvo">Lucian</option>
-				<option value="volvo">MissFortune</option>
-				<option value="volvo">Nilah</option>
-				<option value="volvo">Samira</option>
-				<option value="volvo">Sivir</option>
-				<option value="volvo">Tristana</option>
-				<option value="volvo">Twitch</option>
-				<option value="volvo">Varus</option>
-				<option value="volvo">Vayne</option>
-				<option value="volvo">Xayah</option>
-				<option value="volvo">Zeri</option>
-			</select>
-			<br><br>
-			<label for="suporte">SUP</label>
-			<select name="suporte" id="suporte">
-				<option value="volvo">Alistar</option>
-				<option value="volvo">Amumu</option>
-				<option value="volvo">Ashe</option>
-				<option value="volvo">Bardo</option>
-				<option value="volvo">Blitzcrank</option>
-				<option value="volvo">Brand</option>
-				<option value="volvo">Braum</option>
-				<option value="volvo">Heimerdinger</option>
-				<option value="volvo">Janna</option>
-				<option value="volvo">Karma</option>
-				<option value="volvo">Leona</option>
-				<option value="volvo">Lulu</option>
-				<option value="volvo">Lux</option>
-				<option value="volvo">Maokai</option>
-				<option value="volvo">Morgana</option>
-				<option value="volvo">Nami</option>
-				<option value="volvo">Nautilus</option>
-				<option value="volvo">Pantheon</option>
-				<option value="volvo">Pyke</option>
-				<option value="volvo">Rakan</option>
-				<option value="volvo">Rell</option>
-				<option value="volvo">Renata</option>
-				<option value="volvo">Senna</option>
-				<option value="volvo">Seraphine</option>
-				<option value="volvo">Sona</option>
-				<option value="volvo">Soraka</option>
-				<option value="volvo">Swain</option>
-				<option value="volvo">Taric</option>
-				<option value="volvo">Thresh</option>
-				<option value="volvo">Velkoz</option>
-				<option value="volvo">Xerath</option>
-				<option value="volvo">Yuumi</option>
-				<option value="volvo">Zilean</option>
-				<option value="volvo">Zyra</option>
-			</select>	
-			<p id="demo"></p>
+			<div class="time1">
+				<p>time1</p>
+				<ul style="margin-left:-40px" id="roles1">
+				<li></li>
+				</ul>
+			</div>
+			<div class="time2">
+				<p>time2</p>
+				<ul style="margin-left:-40px" id="roles2">
+				</ul>
+			</div>
+			<ul id="lista1">
+				<li></li>
+			</ul>
+			<ul id="lista2">
+				<li></li>
+			</ul>
 		</div>
 	</div>
 	<hr>
@@ -268,7 +88,7 @@
 		<img class="mini" name="Ashe" src="img/square/Ashe.png">
 		<img class="mini" name="AurelionSol" src="img/square/AurelionSol.png">
 		<img class="mini" name="Azir" src="img/square/Azir.png">
-		<img class="mini" name="Bard" src="img/square/Bard.png">
+		<img class="mini" name="Bardo" src="img/square/Bardo.png">
 		<img class="mini" name="Belveth" src="img/square/Belveth.png">
 		<img class="mini" name="Blitzcrank" src="img/square/Blitzcrank.png">
 		<img class="mini" name="Brand" src="img/square/Brand.png">
@@ -419,7 +239,203 @@
 		<img class="mini" name="Zoe" src="img/square/Zoe.png">
 		<img class="mini" name="Zyra" src="img/square/Zyra.png">
 	</div>
+	<br>
+	<label for="topo">TOP</label>
+	<select name="topo" id="topo">
+				<option value="volvo">Aatrox</option>
+				<option value="volvo">Akali</option>
+				<option value="volvo">Camille</option>
+				<option value="volvo">Chogath</option>
+				<option value="volvo">Darius</option>
+				<option value="volvo">DrMundo</option>
+				<option value="volvo">Fiora</option>
+				<option value="volvo">Gangplank</option>
+				<option value="volvo">Garen</option>
+				<option value="volvo">Gnar</option>
+				<option value="volvo">Gragas</option>
+				<option value="volvo">Gwen</option>
+				<option value="volvo">Illaoi</option>
+				<option value="volvo">Irelia</option>
+				<option value="volvo">Jax</option>
+				<option value="volvo">Jayce</option>
+				<option value="volvo">Kayle</option>
+				<option value="volvo">Kennen</option>
+				<option value="volvo">Kled</option>
+				<option value="volvo">KSante</option>
+				<option value="volvo">Malphite</option>
+				<option value="volvo">Mordekaiser</option>
+				<option value="volvo">Nasus</option>
+				<option value="volvo">Olaf</option>
+				<option value="volvo">Ornn</option>
+				<option value="volvo">Quinn</option>
+				<option value="volvo">Renekton</option>
+				<option value="volvo">Riven</option>
+				<option value="volvo">Rumble</option>
+				<option value="volvo">Sejuani</option>
+				<option value="volvo">Sett</option>
+				<option value="volvo">Shen</option>
+				<option value="volvo">Singed</option>
+				<option value="volvo">Sion</option>
+				<option value="volvo">TahmKench</option>
+				<option value="volvo">Teemo</option>
+				<option value="volvo">Tryndamere</option>
+				<option value="volvo">Urgot</option>
+				<option value="volvo">Volibear</option>
+				<option value="volvo">Yasuo</option>
+				<option value="volvo">Yone</option>
+				<option value="volvo">Yorick</option>
+			</select>
+	<label for="jungle">JG</label>
+	<select name="jungle" id="jungle">
+				<option value="volvo">Amumu</option>
+				<option value="volvo">Belveth</option>
+				<option value="volvo">Diana</option>
+				<option value="volvo">Ekko</option>
+				<option value="volvo">Elise</option>
+				<option value="volvo">Evelynn</option>
+				<option value="volvo">Fiddlesticks</option>
+				<option value="volvo">Graves</option>
+				<option value="volvo">Hecarim</option>
+				<option value="volvo">Ivern</option>
+				<option value="volvo">JarvanIV</option>
+				<option value="volvo">Karthus</option>
+				<option value="volvo">Kayn</option>
+				<option value="volvo">Khazix</option>
+				<option value="volvo">Kindred</option>
+				<option value="volvo">LeeSin</option>
+				<option value="volvo">Lillia</option>
+				<option value="volvo">MasterYi</option>
+				<option value="volvo">Nidalee</option>
+				<option value="volvo">Nocturne</option>
+				<option value="volvo">Nunu</option>
+				<option value="volvo">Poppy</option>
+				<option value="volvo">Rammus</option>
+				<option value="volvo">RekSai</option>
+				<option value="volvo">Rengar</option>
+				<option value="volvo">Sejuani</option>
+				<option value="volvo">Shaco</option>
+				<option value="volvo">Shyvana</option>
+				<option value="volvo">Skarner</option>
+				<option value="volvo">Taliyah</option>
+				<option value="volvo">Talon</option>
+				<option value="volvo">Trundle</option>
+				<option value="volvo">Udyr</option>
+				<option value="volvo">Vi</option>
+				<option value="volvo">Viego</option>
+				<option value="volvo">Volibear</option>
+				<option value="volvo">Warwick</option>
+				<option value="volvo">Wukong</option>
+				<option value="volvo">XinZhao</option>
+				<option value="volvo">Zac</option>
+				<option value="volvo">Zed</option>
+			</select>
+	<label for="meio">MID</label>
+	<select name="meio" id="meio">
+				<option value="volvo">Ahri</option>
+				<option value="volvo">Akali</option>
+				<option value="volvo">Akshan</option>
+				<option value="volvo">Anivia</option>
+				<option value="volvo">Annie</option>
+				<option value="volvo">AurelionSol</option>
+				<option value="volvo">Azir</option>
+				<option value="volvo">Cassiopeia</option>
+				<option value="volvo">Corki</option>
+				<option value="volvo">Ekko</option>
+				<option value="volvo">Fizz</option>
+				<option value="volvo">Galio</option>
+				<option value="volvo">Irelia</option>
+				<option value="volvo">Kassadin</option>
+				<option value="volvo">Katarina</option>
+				<option value="volvo">Leblanc</option>
+				<option value="volvo">Lissandra</option>
+				<option value="volvo">Lux</option>
+				<option value="volvo">Malzahar</option>
+				<option value="volvo">Neeko</option>
+				<option value="volvo">Orianna</option>
+				<option value="volvo">Qiyana</option>
+				<option value="volvo">Ryze</option>
+				<option value="volvo">Swain</option>
+				<option value="volvo">Sylas</option>
+				<option value="volvo">Syndra</option>
+				<option value="volvo">Taliyah</option>
+				<option value="volvo">Talon</option>
+				<option value="volvo">TwistedFate</option>
+				<option value="volvo">Varus</option>
+				<option value="volvo">Veigar</option>
+				<option value="volvo">Vex</option>
+				<option value="volvo">Viktor</option>
+				<option value="volvo">Vladimir</option>
+				<option value="volvo">Xerath</option>
+				<option value="volvo">Yasuo</option>
+				<option value="volvo">Yone</option>
+				<option value="volvo">Zed</option>
+				<option value="volvo">Ziggs</option>
+				<option value="volvo">Zoe</option>
+			</select>
+	<label for="atirador">ADC</label>
+	<select name="atirador" id="atirador">
+				<option value="volvo">Aphelios</option>
+				<option value="volvo">Ashe</option>
+				<option value="volvo">Caitlyn</option>
+				<option value="volvo">Draven</option>
+				<option value="volvo">Ezreal</option>
+				<option value="volvo">Jhin</option>
+				<option value="volvo">Jinx</option>
+				<option value="volvo">Kaisa</option>
+				<option value="volvo">Kalista</option>
+				<option value="volvo">KogMaw</option>
+				<option value="volvo">Lucian</option>
+				<option value="volvo">MissFortune</option>
+				<option value="volvo">Nilah</option>
+				<option value="volvo">Samira</option>
+				<option value="volvo">Sivir</option>
+				<option value="volvo">Tristana</option>
+				<option value="volvo">Twitch</option>
+				<option value="volvo">Varus</option>
+				<option value="volvo">Vayne</option>
+				<option value="volvo">Xayah</option>
+				<option value="volvo">Zeri</option>
+			</select>
+	<label for="suporte">SUP</label>
+	<select name="suporte" id="suporte">
+				<option value="volvo">Alistar</option>
+				<option value="volvo">Amumu</option>
+				<option value="volvo">Ashe</option>
+				<option value="volvo">Bardo</option>
+				<option value="volvo">Blitzcrank</option>
+				<option value="volvo">Brand</option>
+				<option value="volvo">Braum</option>
+				<option value="volvo">Heimerdinger</option>
+				<option value="volvo">Janna</option>
+				<option value="volvo">Karma</option>
+				<option value="volvo">Leona</option>
+				<option value="volvo">Lulu</option>
+				<option value="volvo">Lux</option>
+				<option value="volvo">Maokai</option>
+				<option value="volvo">Morgana</option>
+				<option value="volvo">Nami</option>
+				<option value="volvo">Nautilus</option>
+				<option value="volvo">Pantheon</option>
+				<option value="volvo">Pyke</option>
+				<option value="volvo">Rakan</option>
+				<option value="volvo">Rell</option>
+				<option value="volvo">Renata</option>
+				<option value="volvo">Senna</option>
+				<option value="volvo">Seraphine</option>
+				<option value="volvo">Sona</option>
+				<option value="volvo">Soraka</option>
+				<option value="volvo">Swain</option>
+				<option value="volvo">Taric</option>
+				<option value="volvo">Thresh</option>
+				<option value="volvo">Velkoz</option>
+				<option value="volvo">Xerath</option>
+				<option value="volvo">Yuumi</option>
+				<option value="volvo">Zilean</option>
+				<option value="volvo">Zyra</option>
+			</select>	
 	<script>
+		let selecao = [];
+		let count = 0;
 		let text1 = "img/load/";
 		let text2 = "_1.jpg"
 		$(".mini").hover(function(){
@@ -430,6 +446,10 @@
 			$('#cla2').text('Classe2: ' + obj.classe2); 
 			$('#dif').text('Dificuldade: ' + obj.dif); 
 			$(".destaque").attr('src',text1.concat($(this).attr('name'), text2)); 
+		});
+		$(".mini").click(function(){
+			let campeao = $(this).attr('name');
+			selectTeam(count,campeao);
 		});
 	</script>
 </body>
