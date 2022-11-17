@@ -2,6 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+ul{list-style-type: none;}
 #grad1 {
 	color: white;
 	text-shadow: 2px 2px 5px black;
@@ -74,7 +75,7 @@ img{
 	color:yellow;
 	position:absolute;
 	top:50px;
-	left:900px;
+	left:850px;
 }
 .destaque{
 	position:absolute;
@@ -83,7 +84,7 @@ img{
 	height:435px !important;
 	width:250px !important;
 }
-ul {
+.trunfo {
 	font-size:140%;
 	color: yellow;
 	font-weight: bold;
@@ -91,7 +92,24 @@ ul {
 	position:absolute;
 	top:400px;
 	left:320px;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.time1{
+	color:blue;
+}
+.time2{
+	color:red;
+}
+#lista1{
+	position:absolute;
+	margin-top:-246px;
+	margin-left:10px;
+	color:yellow;
+}
+#lista2{
+	position:absolute;
+	margin-top:-108px;
+	margin-left:10px;
+	color:yellow;
 }
