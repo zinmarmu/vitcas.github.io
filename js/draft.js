@@ -177,6 +177,80 @@ let xampions = [
 {nome:"Zyra" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$"}
 ];
 function myFunction() {
+	count = 0;
 	shuffle(roles);
-  document.getElementById("demo").innerHTML = JSON.stringify(roles, null, 2);
+  $("#roles1").append('<li>' + roles[0] + '</li>');
+	$("#roles1").append('<li>' + roles[1] + '</li>');
+	$("#roles1").append('<li>' + roles[2] + '</li>');
+	$("#roles1").append('<li>' + roles[3] + '</li>');
+	$("#roles1").append('<li>' + roles[4] + '</li>');
+	shuffle(roles);
+  $("#roles2").append('<li>' + roles[0] + '</li>');
+	$("#roles2").append('<li>' + roles[1] + '</li>');
+	$("#roles2").append('<li>' + roles[2] + '</li>');
+	$("#roles2").append('<li>' + roles[3] + '</li>');
+	$("#roles2").append('<li>' + roles[4] + '</li>');
+	document.getElementById("botao1").disabled = true;
+}
+function clearDraft(){
+
+	$("#ally1").attr('src','img/dummy.png'); 
+	$("#ally2").attr('src','img/dummy.png'); 
+	$("#ally3").attr('src','img/dummy.png'); 
+	$("#ally4").attr('src','img/dummy.png'); 
+	$("#ally5").attr('src','img/dummy.png'); 
+	$("#enemy1").attr('src','img/dummy.png'); 
+	$("#enemy2").attr('src','img/dummy.png'); 
+	$("#enemy3").attr('src','img/dummy.png'); 
+	$("#enemy4").attr('src','img/dummy.png'); 
+	$("#enemy5").attr('src','img/dummy.png'); 
+}
+function pickDraft(){
+	
+	let text1 = "img/square/";
+	let text2 = ".png"
+	$("#ally1").attr('src',text1.concat('oi', text2)); 
+	$("#ally2").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#ally3").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#ally4").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#ally5").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#enemy1").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#enemy2").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#enemy3").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#enemy4").attr('src',text1.concat($(this).attr('name'), text2)); 
+	$("#enemy5").attr('src',text1.concat($(this).attr('name'), text2)); 
+}
+function selectTeam(x,y){
+	switch (x) {
+  case 0:
+    $("#lista1").append('<li>' + y + '</li>');
+    break;
+  case 1:
+    $("#lista2").append('<li>' + y + '</li>');
+    break;
+  case 2:
+     $("#lista2").append('<li>' + y + '</li>');
+    break;
+  case 3:
+    $("#lista1").append('<li>' + y + '</li>');
+    break;
+  case 4:
+    $("#lista1").append('<li>' + y + '</li>');
+    break;
+  case 5:
+    $("#lista2").append('<li>' + y + '</li>');
+    break;
+	case 6:
+    $("#lista2").append('<li>' + y + '</li>');
+    break;
+	case 7:
+    $("#lista1").append('<li>' + y + '</li>');
+    break;
+	case 8:
+    $("#lista1").append('<li>' + y + '</li>');
+    break;
+  case 9:
+    $("#lista2").append('<li>' + y + '</li>');
+	}
+	count++;
 }
