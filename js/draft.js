@@ -1,3 +1,7 @@
+let text3 = "img/square/";
+let text4 = ".png"
+let text5 = "img/centered/";
+let text6 = "_0.jpg"
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
   // While there remain elements to shuffle.
@@ -10,6 +14,28 @@ function shuffle(array) {
       array[randomIndex], array[currentIndex]];
   }
   return array;
+}
+function clearDraft(){
+	$("#ally1").attr('src','img/dummy.png'); 
+	$("#ally2").attr('src','img/dummy.png'); 
+	$("#ally3").attr('src','img/dummy.png'); 
+	$("#ally4").attr('src','img/dummy.png'); 
+	$("#ally5").attr('src','img/dummy.png'); 
+	$("#enemy1").attr('src','img/dummy.png'); 
+	$("#enemy2").attr('src','img/dummy.png'); 
+	$("#enemy3").attr('src','img/dummy.png'); 
+	$("#enemy4").attr('src','img/dummy.png'); 
+	$("#enemy5").attr('src','img/dummy.png'); 
+	$("#art1").attr('src','img/power.jpg'); 
+	$("#art2").attr('src','img/power.jpg'); 
+	$("#art3").attr('src','img/power.jpg'); 
+	$("#art4").attr('src','img/power.jpg'); 
+	$("#art5").attr('src','img/power.jpg'); 
+	$("#art6").attr('src','img/power.jpg'); 
+	$("#art7").attr('src','img/power.jpg'); 
+	$("#art8").attr('src','img/power.jpg'); 
+	$("#art9").attr('src','img/power.jpg'); 
+	$("#art10").attr('src','img/power.jpg'); 
 }
 let roles = ["TOP", "JG", "MID", "ADC", "SUP"];
 let xampions = [
@@ -177,6 +203,7 @@ let xampions = [
 {nome:"Zyra" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$"}
 ];
 function myFunction() {
+	clearDraft();
 	count = 0;
 	shuffle(roles);
   $("#roles1").append('<li>' + roles[0] + '</li>');
@@ -192,65 +219,59 @@ function myFunction() {
 	$("#roles2").append('<li>' + roles[4] + '</li>');
 	document.getElementById("botao1").disabled = true;
 }
-function clearDraft(){
 
-	$("#ally1").attr('src','img/dummy.png'); 
-	$("#ally2").attr('src','img/dummy.png'); 
-	$("#ally3").attr('src','img/dummy.png'); 
-	$("#ally4").attr('src','img/dummy.png'); 
-	$("#ally5").attr('src','img/dummy.png'); 
-	$("#enemy1").attr('src','img/dummy.png'); 
-	$("#enemy2").attr('src','img/dummy.png'); 
-	$("#enemy3").attr('src','img/dummy.png'); 
-	$("#enemy4").attr('src','img/dummy.png'); 
-	$("#enemy5").attr('src','img/dummy.png'); 
-}
-function pickDraft(){
-	
-	let text1 = "img/square/";
-	let text2 = ".png"
-	$("#ally1").attr('src',text1.concat('oi', text2)); 
-	$("#ally2").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#ally3").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#ally4").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#ally5").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#enemy1").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#enemy2").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#enemy3").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#enemy4").attr('src',text1.concat($(this).attr('name'), text2)); 
-	$("#enemy5").attr('src',text1.concat($(this).attr('name'), text2)); 
-}
 function selectTeam(x,y){
+	
 	switch (x) {
   case 0:
     $("#lista1").append('<li>' + y + '</li>');
+		$("#ally1").attr('src',text3.concat(y, text4)); 
+		$("#art1").attr('src',text5.concat(y, text6)); 
     break;
   case 1:
     $("#lista2").append('<li>' + y + '</li>');
+		$("#enemy1").attr('src',text3.concat(y, text4)); 
+		$("#art6").attr('src',text5.concat(y, text6)); 
     break;
   case 2:
      $("#lista2").append('<li>' + y + '</li>');
+		 $("#enemy2").attr('src',text3.concat(y, text4)); 
+		 $("#art7").attr('src',text5.concat(y, text6)); 
     break;
   case 3:
     $("#lista1").append('<li>' + y + '</li>');
+		$("#ally2").attr('src',text3.concat(y, text4)); 
+		$("#art2").attr('src',text5.concat(y, text6)); 
     break;
   case 4:
     $("#lista1").append('<li>' + y + '</li>');
+		$("#ally3").attr('src',text3.concat(y, text4)); 
+		$("#art3").attr('src',text5.concat(y, text6)); 
     break;
   case 5:
     $("#lista2").append('<li>' + y + '</li>');
+		$("#enemy3").attr('src',text3.concat(y, text4)); 
+		$("#art8").attr('src',text5.concat(y, text6)); 
     break;
 	case 6:
     $("#lista2").append('<li>' + y + '</li>');
+		$("#enemy4").attr('src',text3.concat(y, text4));
+		$("#art9").attr('src',text5.concat(y, text6)); 		
     break;
 	case 7:
     $("#lista1").append('<li>' + y + '</li>');
+		$("#ally4").attr('src',text3.concat(y, text4)); 
+		$("#art4").attr('src',text5.concat(y, text6)); 
     break;
 	case 8:
     $("#lista1").append('<li>' + y + '</li>');
+		$("#ally5").attr('src',text3.concat(y, text4)); 
+		$("#art5").attr('src',text5.concat(y, text6)); 
     break;
   case 9:
     $("#lista2").append('<li>' + y + '</li>');
+		$("#enemy5").attr('src',text3.concat(y, text4)); 
+		$("#art10").attr('src',text5.concat(y, text6)); 
 	}
 	count++;
 }
