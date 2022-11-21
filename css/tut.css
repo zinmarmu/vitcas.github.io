@@ -1,0 +1,24 @@
+body{
+	background-color:#ffcd30;
+	color:#8f2d24;
+}
+li{
+	font-size: 120%;
+}
+p{
+	position: absolute; 
+	top: -15px;
+	left:50px;
+}
+.ping{
+	width:50px;
+}
+.blah{
+	color:black;
+	margin: 10px;
+}
+.ftp{
+	position: relative;
+	width: 600px;
+	margin: 10px;
+}

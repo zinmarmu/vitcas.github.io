@@ -2,17 +2,8 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
-ul{list-style-type: none;}
-#grad1 {
-	color: white;
-	text-shadow: 2px 2px 5px black;
-	background-color: red;
-	/* For browsers that do not support gradients */
-	background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-	/* Standard syntax (must be last) */
-}
 table {
-	background-color:white;
+background-color:white;
   border-collapse: collapse;
 }
 table tr:nth-child(odd) {
@@ -23,93 +14,14 @@ table td {
   padding: 4px;
 }
 body{
-	background-color:grey;
+background-color:grey;
 }
-.visual{
-	background-color:black;
+.ban{
+background:#e36f7f !important;
 }
-.clock{
-	
-	color:white;
-	font-size:150%;
-	text-shadow: 0 0 3px yellow;
-	padding:10px;
+.good{
+background:#83eb8a !important;
 }
-img{
-	width:44px;
-}
-.bubble{
-	border-radius:50px;
-	border: 2px groove white;
-}
-.bluet{
-	background-color:black;
-	height:430px;
-}
-.bluet img{
-	display:list-item;
-	margin:10px;
-	width:75px;
-}
-.redt img{
-	position:absolute;
-	display:list-item;
-	margin:10px;
-	width:75px;
-}
-.skin{
-	position:absolute;
-	height:85px;
-	width:180px !important;
-	mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 30%);
-   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 30%);
-}
-.skin2{
-	position:absolute;
-	height:85px;
-	width:180px !important;
-	mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 30%);
-   -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 30%);
-}
-.log{
-	color:yellow;
-	position:absolute;
-	top:50px;
-	left:850px;
-}
-.destaque{
-	position:absolute;
-	margin-top:-435px;
-	margin-left:300px;
-	height:435px !important;
-	width:250px !important;
-}
-.trunfo {
-	font-size:140%;
-	color: yellow;
-	font-weight: bold;
-  text-shadow: 3px 3px 5px black;
-	position:absolute;
-	top:400px;
-	left:320px;
-  margin: 0;
-  padding: 0;
-}
-.time1{
-	color:#03fc13;
-}
-.time2{
-	color:#fc03ca;
-}
-#lista1{
-	position:absolute;
-	margin-top:-246px;
-	margin-left:10px;
-	color:yellow;
-}
-#lista2{
-	position:absolute;
-	margin-top:-108px;
-	margin-left:10px;
-	color:yellow;
+.monkey{
+background:#e8f05d !important;
 }
