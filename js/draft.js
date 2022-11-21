@@ -46,7 +46,7 @@ let xampions = [
 {nome:"Alistar" ,dano:"Mágico", classe1:"Suporte", classe2:"Tanque", dif:"$$"},
 {nome:"Amumu" ,dano:"Mágico", classe1:"Tanque", classe2:"Mago", dif:"$"},
 {nome:"Anivia" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$$"},
-{nome:"Annie" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$"},
+{nome:"Annie" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$"},
 {nome:"Aphelios" ,dano:"Físico", classe1:"Atirador", classe2:"nt", dif:"$$$"},
 {nome:"Ashe" ,dano:"Físico", classe1:"Atirador", classe2:"Suporte", dif:"$"},
 {nome:"AurelionSol" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$$$$"},
@@ -60,7 +60,7 @@ let xampions = [
 {nome:"Camille" ,dano:"Mágico", classe1:"Lutador", classe2:"Tanque", dif:"$$$"},
 {nome:"Cassiopeia" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$$"},
 {nome:"Chogath" ,dano:"Mágico", classe1:"Tanque", classe2:"Mago", dif:"$"},
-{nome:"Corki" ,dano:"Mágico", classe1:"Atirador", classe2:"nt", dif:"$$"},
+{nome:"Corki" ,dano:"Mágico", classe1:"Atirador", classe2:"Mago", dif:"$$"},
 {nome:"Darius" ,dano:"Físico", classe1:"Lutador", classe2:"Tanque", dif:"$"},
 {nome:"Diana" ,dano:"Mágico", classe1:"Lutador", classe2:"Mago", dif:"$"},
 {nome:"Draven" ,dano:"Físico", classe1:"Atirador", classe2:"nt", dif:"$$"},
@@ -69,7 +69,7 @@ let xampions = [
 {nome:"Elise" ,dano:"Mágico", classe1:"Assassino", classe2:"Mago", dif:"$$$"},
 {nome:"Evelynn" ,dano:"Mágico", classe1:"Assassino", classe2:"Mago", dif:"$$$"},
 {nome:"Ezreal" ,dano:"Misto", classe1:"Atirador", classe2:"Mago", dif:"$$"},
-{nome:"Fiddlesticks" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$"},
+{nome:"Fiddlesticks" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$"},
 {nome:"Fiora" ,dano:"Físico", classe1:"Lutador", classe2:"Duelista", dif:"$$"},
 {nome:"Fizz" ,dano:"Mágico", classe1:"Assassino", classe2:"Lutador", dif:"$"},
 {nome:"Galio" ,dano:"Mágico", classe1:"Tanque", classe2:"Mago", dif:"$$"},
@@ -88,7 +88,7 @@ let xampions = [
 {nome:"JarvanIV" ,dano:"Físico", classe1:"Lutador", classe2:"Tanque", dif:"$"},
 {nome:"Jax" ,dano:"Misto", classe1:"Lutador", classe2:"Duelista", dif:"$"},
 {nome:"Jayce" ,dano:"Físico", classe1:"Lutador", classe2:"Atirador", dif:"$$$"},
-{nome:"Jhin" ,dano:"Misto", classe1:"Atirador", classe2:"Mago", dif:"$"},
+{nome:"Jhin" ,dano:"Misto", classe1:"Atirador", classe2:"nt", dif:"$"},
 {nome:"Jinx" ,dano:"Físico", classe1:"Atirador", classe2:"nt", dif:"$"},
 {nome:"Kaisa" ,dano:"Misto", classe1:"Atirador", classe2:"nt", dif:"$$"},
 {nome:"Kalista" ,dano:"Físico", classe1:"Atirador", classe2:"nt", dif:"$$$"},
@@ -152,7 +152,7 @@ let xampions = [
 {nome:"Seraphine" ,dano:"Mágico", classe1:"Suporte", classe2:"Mago", dif:"$"},
 {nome:"Sett" ,dano:"Físico", classe1:"Lutador", classe2:"Tanque", dif:"$"},
 {nome:"Shaco" ,dano:"Misto", classe1:"Assassino", classe2:"Mago", dif:"$$$"},
-{nome:"Shen" ,dano:"Misto", classe1:"Tanque", classe2:"nt", dif:"$$"},
+{nome:"Shen" ,dano:"Misto", classe1:"Tanque", classe2:"Suporte", dif:"$$"},
 {nome:"Shyvana" ,dano:"Misto", classe1:"Tanque", classe2:"Lutador", dif:"$$$"},
 {nome:"Singed" ,dano:"Mágico", classe1:"Tanque", classe2:"Mago", dif:"$"},
 {nome:"Sion" ,dano:"Físico", classe1:"Tanque", classe2:"Lutador", dif:"$"},
@@ -176,7 +176,7 @@ let xampions = [
 {nome:"Twitch" ,dano:"Misto", classe1:"Atirador", classe2:"Assassino", dif:"$$"},
 {nome:"Udyr" ,dano:"Misto", classe1:"Tanque", classe2:"Lutador", dif:"$$"},
 {nome:"Urgot" ,dano:"Físico", classe1:"Tanque", classe2:"Lutador", dif:"$$"},
-{nome:"Varus" ,dano:"Misto", classe1:"Atirador", classe2:"Mago", dif:"$"},
+{nome:"Varus" ,dano:"Misto", classe1:"Atirador", classe2:"nt", dif:"$"},
 {nome:"Vayne" ,dano:"Físico", classe1:"Atirador", classe2:"nt", dif:"$$"},
 {nome:"Veigar" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$"},
 {nome:"Velkoz" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$"},
@@ -197,7 +197,7 @@ let xampions = [
 {nome:"Zac" ,dano:"Mágico", classe1:"Tanque", classe2:"nt", dif:"$$"},
 {nome:"Zed" ,dano:"Físico", classe1:"Assassino", classe2:"nt", dif:"$"},
 {nome:"Zeri" ,dano:"Misto", classe1:"Atirador", classe2:"nt", dif:"$$$"},
-{nome:"Ziggs" ,dano:"Mágico", classe1:"Assassino", classe2:"nt", dif:"$"},
+{nome:"Ziggs" ,dano:"Mágico", classe1:"Mago", classe2:"nt", dif:"$"},
 {nome:"Zilean" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$"},
 {nome:"Zoe" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$$$"},
 {nome:"Zyra" ,dano:"Mágico", classe1:"Mago", classe2:"Suporte", dif:"$"}
@@ -206,17 +206,17 @@ function myFunction() {
 	clearDraft();
 	count = 0;
 	shuffle(roles);
-  $("#roles1").append('<li>' + roles[0] + '</li>');
-	$("#roles1").append('<li>' + roles[1] + '</li>');
-	$("#roles1").append('<li>' + roles[2] + '</li>');
-	$("#roles1").append('<li>' + roles[3] + '</li>');
-	$("#roles1").append('<li>' + roles[4] + '</li>');
+  $("#roles1").append('<li>1.' + roles[0] + '</li>');
+	$("#roles1").append('<li>4.' + roles[1] + '</li>');
+	$("#roles1").append('<li>5.' + roles[2] + '</li>');
+	$("#roles1").append('<li>8.' + roles[3] + '</li>');
+	$("#roles1").append('<li>9.' + roles[4] + '</li>');
 	shuffle(roles);
-  $("#roles2").append('<li>' + roles[0] + '</li>');
-	$("#roles2").append('<li>' + roles[1] + '</li>');
-	$("#roles2").append('<li>' + roles[2] + '</li>');
-	$("#roles2").append('<li>' + roles[3] + '</li>');
-	$("#roles2").append('<li>' + roles[4] + '</li>');
+  $("#roles2").append('<li>2.' + roles[0] + '</li>');
+	$("#roles2").append('<li>3.' + roles[1] + '</li>');
+	$("#roles2").append('<li>6.' + roles[2] + '</li>');
+	$("#roles2").append('<li>7.' + roles[3] + '</li>');
+	$("#roles2").append('<li>10.' + roles[4] + '</li>');
 	document.getElementById("botao1").disabled = true;
 }
 
