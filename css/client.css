@@ -1,0 +1,31 @@
+body{
+	background-color:grey;
+	padding: 10px;
+}
+section{
+	margin: 10px;
+	border: 2px solid red;
+	padding: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+h3{
+	margin: 5px;
+}
+.nini{
+	width: 40px;
+}
+#clifull{
+	border: 2px solid blue;
+	background-color:lightblue;
+	padding: 10px;
+	width: 500px;
+}
+#pageA{background-color: #ead1dc;}
+#navi{margin-left: 10px}
