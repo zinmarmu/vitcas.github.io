@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="coe-type" coe="text/html; charset=UTF-8">
+  <title>Client</title>
+  <link rel="stylesheet" href="css/client.css">
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+	<div id="clifull">
+		<ul id="navi">
+			<li><a href="#pageA">Jogar</a></li>
+  		<li><a href="#pageB">Início</a></li>
+  		<li><a href="#pageC">Clash</a></li>
+			<li><a href="#pageE">Perfil</a></li>
+			<li><a href="#pageF">Coleção</a></li>
+  		<li><a href="#pageG">Espólio</a></li>
+  		<li><a href="#pageD">Loja</a></li>
+  		<li><a href="#pageH">Config</a></li>
+  	</ul>
+		<div id="widow">
+			<section id="pageA">
+				<form action="/action_page.php">
+					<h3>Jogar</h3>
+					<img id="mypick" class="nini" src="img/dummy.png">	
+					Seu pick:	
+					<select name="selpick" id="selpick">
+  					<option value="volvo">Gwen</option>
+  					<option value="saab">Vayne</option>
+  					<option value="mercedes">Yuumi</option>
+  					<option value="audi">Nami</option>
+					</select>
+					<img id="myban" class="nini" src="img/dummy.png">		
+					Seu ban:	
+					<select name="selban" id="selban">
+  					<option value="volvo">Yasuo</option>
+  					<option value="saab">Vayne</option>
+  					<option value="mercedes">Yuumi</option>
+  					<option value="audi">Nami</option>
+					</select>
+					<br>Sua role:
+					<input type="radio" id="role1" name="rdroles" value="1" checked>
+					<label for="role1">Top</label>
+					<input type="radio" id="role2" name="rdroles" value="2">
+					<label for="role2">Jg</label>
+					<input type="radio" id="role3" name="rdroles" value="3">
+					<label for="role3">Mid</label>
+					<input type="radio" id="role4" name="rdroles" value="4">
+					<label for="role4">Adc</label>
+					<input type="radio" id="role5" name="rdroles" value="5">
+					<label for="role5">Sup</label>
+					<input type="hidden" id="custId" name="custId" value="3487">
+					<br><input type="submit" value="Buscar">
+					<input type="reset">
+				</form> 
+			</section>
+			<section id="pageB"></section>
+		</div>
+	</div>
+</body>
+</html>
