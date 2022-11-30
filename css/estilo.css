@@ -1,0 +1,64 @@
+body{
+	background-image: url("../img/pokebg.png");
+	width:520px;
+  margin: 20px auto;
+  color: white;
+}
+.maincon{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding:10px;
+} 
+.central{
+  text-align: center;
+}
+.myButton {
+  box-shadow:inset 0px -3px 7px 0px #29bbff;
+  background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  background-color:#2dabf9;
+  border-radius:3px;
+  border:1px solid #0b0e07;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  margin: 3px 1px;
+  width: 24%;
+  padding:6px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+  background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+  background-color:#0688fa;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+#playlist{color:blue;display:none;}
+#games{color:lightgreen;display:none;}
+#movies{color:hotpink;display:none;}
+#animes{color:lightblue;display:none;}
+#series{color:pink;display:none;}
+#western{color:orange;display:none;}
+#balance{display:none;}
+#anonf{margin: 3px;}
+@media only screen and (max-width: 640px) {
+  body{
+    background-image: url("../img/pokebg.png");
+    width:90%;
+    margin: 5% auto;
+    color: white;
+  }
+  img{
+    max-width: 300px;
+  }
+  .myButton {
+    width: 30%;
+  }
+  .myButton:active {
+    position:relative;
+    background-color: yellow;
+    background: yellow;
+  }
+}
