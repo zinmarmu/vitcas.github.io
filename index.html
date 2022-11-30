@@ -2,102 +2,50 @@
 <html lang="pt">
   <head>
     <title>dwenwjkcnw</title>
-    <link rel="shortcut icon" href="images/deri.png" />
-		<style>
-			body{
-				background-image: url("pokebg.png");
-				width:520px;
-        margin: 20px auto;
-        color: white;
-			}
-      td, tr, th{
-        border: 1px solid;
-      }
-      .navbar {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      .navbar li{display: inline;}
-			.maincon{
-				background-color: black;
-				padding:10px;
-			}
-      .abt{text-align: center;}
-      #playlist{color:blue;display:none;}
-      #games{color:lightgreen;display:none;}
-      #movies{color:hotpink;display:none;}
-      #animes{color:lightblue;display:none;}
-      #series{color:pink;display:none;}
-      #western{color:orange;display:none;}
-      #balance{display:none;}
-      #anonf{
-        margin: 5px;
-      }
-      .myButton {
-        box-shadow:inset 0px -3px 7px 0px #29bbff;
-        background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-        background-color:#2dabf9;
-        border-radius:3px;
-        border:1px solid #0b0e07;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        margin: 3px 1px;
-        width: 24%;
-        padding:6px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #263666;
-      }
-      .myButton:hover {
-        background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-        background-color:#0688fa;
-      }
-      .myButton:active {
-        position:relative;
-        top:1px;
-      }
-		</style>
-    <script src="js/myscript.js"></script>
+    <link rel="shortcut icon" href="img/deri.png" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/ms2.js"></script>
     <script src="js/ctdw.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div class="maincon">       
-      <div class="abt">
-        <img src="images/922436_b0801.gif">
+      <div class="central">
+        <img src="img/922436_b0801.gif">
         <p style="color:red" id="demo"></p>
-        <ul class="navbar">
-          <li><a href="#home">Home</a></li>
-          <li><a href="tools.html">Tools</a></li>
-          <li><a href="tutorial.html">League of Legends</a></li>
+        
+      </div>  
+      <div>
+        <a id="anonf" href="https://discord.gg/4282y8EGxP"><img alt="discord" src="img/banner.png"></a>
+        <a class="mb2" href="tools.html">tools</a>
+        <a class="mb2" href="tutorial.html">lol</a>
+        <a href="https://www3.cbox.ws/box/?boxid=3505041&boxtag=6YOpUc">cbox</a>
+      </div>
+      <button class="myButton" onclick="myFunction('playlist')">Music</button>
+      <div id="playlist">
+        <ul>
+        <li>Amon Amarth</li>
+        <li>AURORA</li>
+        <li>Avenged Sevenfold</li>
+        <li>Blackpink</li>
+        <li>Disturbed</li>
+        <li>Dua Lipa</li>
+        <li>Eminem</li>
+        <li>Enter Shikari</li>
+        <li>Ghost</li>
+        <li>Hollywood Undead</li>
+        <li>Iron Maiden</li>
+        <li>Linkin Park</li>
+        <li>Metallica</li>
+        <li>Rammstein</li>
+        <li>Sigrid</li>
+        <li>Three Days Grace</li>
+        <li>Within Temptation</li>
+        <li>XXXTentacion</li>
         </ul>
       </div>
-      <br>
-        <button class="myButton" onclick="myFunction('playlist')">Music</button>
-        <div id="playlist">
-        <ul>
-          <li>Amon Amarth</li>
-          <li>AURORA</li>
-          <li>Avenged Sevenfold</li>
-          <li>Blackpink</li>
-          <li>Disturbed</li>
-          <li>Dua Lipa</li>
-          <li>Eminem</li>
-          <li>Enter Shikari</li>
-          <li>Ghost</li>
-          <li>Hollywood Undead</li>
-          <li>Iron Maiden</li>
-          <li>Linkin Park</li>
-          <li>Metallica</li>
-          <li>Rammstein</li>
-          <li>Sigrid</li>
-          <li>Three Days Grace</li>
-          <li>Within Temptation</li>
-          <li>XXXTentacion</li>
-        </ul>
-        </div>
-        <button class="myButton"  onclick="myFunction('movies')">Movies</button>
-        <div id="movies">
+      <button class="myButton"  onclick="myFunction('movies')">Movies</button>
+      <div id="movies">
         <ol>
           <li>Snow White and the Seven Dwarfs (1937)</li>
           <li>The Wizard of Oz (1939)</li>
@@ -232,9 +180,9 @@
           <li>Here Are the Young Men (2021)</li>
           <li>Resident Evil: Welcome to Raccoon City (2021)</li>
         </ol>
-        </div>
-        <button class="myButton"  onclick="myFunction('animes')">Anime</button>
-        <div id="animes">
+      </div>
+      <button class="myButton"  onclick="myFunction('animes')">Anime</button>
+      <div id="animes">
         <ul>
           <li>Accel World</li>
           <li>Ajin</li>
@@ -303,9 +251,9 @@
           <li>Yu☆Gi☆Oh!: Duel Monsters</li>
           <li>Yu☆Gi☆Oh!: Duel Monsters GX</li>
         </ul>
-        </div>
-        <button class="myButton"  onclick="myFunction('western')">Cartoon</button>
-        <div id="western">
+      </div>
+      <button class="myButton"  onclick="myFunction('western')">Cartoon</button>
+      <div id="western">
         <ul>
           <li>Avatar: The Last Airbender</li>
           <li>The Legend of Korra</li>
@@ -315,9 +263,9 @@
           <li>The Simpsons</li>
           <li>Futurama</li>
         </ul>
-        </div>
-        <button class="myButton"  onclick="myFunction('series')">TV</button>
-        <div id="series">
+      </div>
+      <button class="myButton"  onclick="myFunction('series')">TV</button>
+      <div id="series">
         <ul>
           <li>Lost in Space (1967)</li>
           <li>El Chavo del 8 (1972)</li>
@@ -336,16 +284,15 @@
           <li>Loki (2021)</li>
           <li>Midnight Mass (2021)</li>     
         </ul>
-        </div>
-        <p>
-        <a id="anonf" href="https://discord.gg/4282y8EGxP"><img alt="discord" src="images/banner.png"></a>
-        <a href="https://anilist.co/user/awface/">anilist</a> |
-        <a href="https://myanimelist.net/profile/awface">mal</a> |
-        <a href="https://www.tvtime.com/en/user/10891292/profile">tvtime</a> |
-        <a href="https://letterboxd.com/awface/">letterboxd</a> |
-        <a href="https://www.backloggery.com/awface">backlog</a> |
-        <a href="https://devmoe.blogspot.com/">blog</a>
-        </p>
       </div>
+      <ul>  
+        <li><a href="https://anilist.co/user/awface/">anilist</a></li> 
+        <li><a href="https://myanimelist.net/profile/awface">mal</a></li> 
+        <li><a href="https://www.tvtime.com/en/user/10891292/profile">tvtime</a></li>
+        <li><a href="https://letterboxd.com/awface/">letterboxd</a></li> 
+        <li><a href="https://www.backloggery.com/awface">backlog</a></li> 
+        <li><a href="https://devmoe.blogspot.com/">devmoe</a></li>
+      </ul>
+    </div>
   </body>
 </html>
