@@ -1,0 +1,38 @@
+body{
+	background-color: #1f0326;
+}
+form{
+	background-color: #957593;
+	border: 1px solid white;
+	width: 200px;
+	padding: 10px;
+}
+p{
+	max-width: 400px;
+}
+table,td,tr{
+	border: 1px solid white; 
+	color: yellow}
+img{
+	width: 30px;
+}
+button{
+	margin-left:70px
+}
+.tuts{
+	display:inline-block;
+	margin: 5px;
+	float: left;
+	overflow: auto;
+}
+.pre{background-color:#DCF56A;}
+.dom{background-color:#F23F3F;}
+.sor{	background-color:#C53FF2;}
+.res{background-color:#80E551;}
+.ins{background-color:#6ABBF5;}
+#resultado{
+	color: yellow;
+}
+.demo{
+	color: white;
+}
