@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	<meta charset="UTF-8">
+  	<title>Rune Editor</title>
+  	<link rel="shortcut icon" href="favlol.ico" />
+  	<script src="js/jquery-3.6.0.min.js"></script>
+  	<script src="js/math.js"></script>
+		<script src="js/runvi.js"></script>
+		<link rel="stylesheet" href="css/runvi.css">
+	</head>
+	<body>
+		<div class="tuts">
+			<form id="myForm" onsubmit="return false">
+  			Primary: 
+  			<select id="path1" onchange="fixvalues()">
+  				<option class="pre" value="8000">Precisao</option>
+  				<option class="dom" value="8100">Dominacao</option>
+  				<option class="sor" value="8200">Feiticaria</option>
+  				<option class="res" value="8400">Determinacao</option>
+  				<option class="ins" value="8300">Inspiracao</option>
+  			</select>
+  			<p>
+  				<input type="radio" id="a0" name="A" value="1" checked="">a0
+  				<input type="radio" id="a1" name="A" value="2">a1
+  				<input type="radio" id="a2" name="A" value="3">a2
+  				<input type="radio" id="a3" name="A" value="4" hidden>a3
+					<br>
+  				<input type="radio" id="b0" name="B" value="4" checked="">b0
+  				<input type="radio" id="b1" name="B" value="5">b1
+  				<input type="radio" id="b2" name="B" value="6">b2
+  				<input type="radio" id="b3" name="B" value="6" hidden>b3
+					<br>
+  				<input type="radio" id="c0" name="C" value="7" checked="">c0
+  				<input type="radio" id="c1" name="C" value="8">c1
+  				<input type="radio" id="c2" name="C" value="9">c2
+  				<input type="radio" id="c3" name="C" value="9" hidden>c3
+					<br>
+  				<input type="radio" id="d0" name="D" value="10" checked="">d1
+  				<input type="radio" id="d1" name="D" value="11">d2
+  				<input type="radio" id="d2" name="D" value="12">d3
+  				<input type="radio" id="d3" name="D" value="13" hidden>d4
+  			</p>
+  			Secondary: 
+  			<select id="path2" onchange="fixvalues()">
+  				<option class="dom" value="8100">Dominacao</option>
+					<option class="pre" value="8000">Precisao</option>
+  				<option class="sor" value="8200">Feiticaria</option>
+  				<option class="res" value="8400">Determinacao</option>
+  				<option class="ins" value="8300">Inspiracao</option>
+  			</select>
+  			<p>
+  				<input type="checkbox" id="du0" name="xek" value="4">b0
+  				<input type="checkbox" id="du1" name="xek" value="5">b1
+  				<input type="checkbox" id="du2" name="xek" value="6">b2
+  				<input type="checkbox" id="du3" name="xek" value="6" hidden>b3<br>
+  				<input type="checkbox" id="dudu0" name="xek" value="7">c0
+  				<input type="checkbox" id="dudu1" name="xek" value="8">c1
+  				<input type="checkbox" id="dudu2" name="xek" value="9">c2	
+  				<input type="checkbox" id="dudu3" name="xek" value="6" hidden>c3<br>
+  				<input type="checkbox" id="edu0" name="xek" value="10">d0
+  				<input type="checkbox" id="edu1" name="xek" value="11">d1
+  				<input type="checkbox" id="edu2" name="xek" value="12">d2
+  				<input type="checkbox" id="edu3" name="xek" value="13" hidden>d3
+				</p>
+  			<p>
+  				<input type="radio" id="g1" name="G" value="5008">dano
+  				<input type="radio" id="g2" name="G" value="5005" checked="">atk sp
+  				<input type="radio" id="g3" name="G" value="5007">cdr
+  				<br>
+  				<input type="radio" id="h1" name="H" value="5008" checked="">dano
+  				<input type="radio" id="h2" name="H" value="5002">armor
+  				<input type="radio" id="h3" name="H" value="5003">mr
+  				<br>
+  				<input type="radio" id="i1" name="I" value="5001">vida
+  				<input type="radio" id="i2" name="I" value="5002" checked="">armor
+  				<input type="radio" id="i3" name="I" value="5003">mr
+  			</p>
+  			<button onclick="get()">Gerar</button>
+			</form>
+		</div>
+		<div class="tuts demo">
+			<input type="file" accept=".json" id="importado">
+			<select id="mySelect" onchange="selchamp()"></select>
+			<br>
+			<table>
+				<tr>
+					<td>
+						<img src="https://i.ibb.co/FYMhZg8/Press-The-Attack.png" alt="Press-The-Attack">
+						<img src="https://i.ibb.co/71k2Dvb/Lethal-Tempo.png" alt="Lethal-Tempo">
+						<img src="https://i.ibb.co/yBTLBgQ/Fleet-Footwork.png" alt="Fleet-Footwork">
+						<img src="https://i.ibb.co/DC5GMJ0/Conqueror.png" alt="Conqueror">
+					</td>
+					<td>
+					<img src="https://i.ibb.co/ZTsCrDn/Electrocute.png" alt="Electrocute">
+					<img src="https://i.ibb.co/twGJ4Vq/Predator.png" alt="Predator">
+					<img src="https://i.ibb.co/ZgY9w1J/Dark-Harvest.png" alt="Dark-Harvest">
+					<img src="https://i.ibb.co/gmNGSq6/Hail-Of-Blades.png" alt="Hail-Of-Blades">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/vVznWMR/Summon-Aery.png" alt="Summon-Aery">
+						<img src="https://i.ibb.co/H4tk26x/Arcane-Comet.png" alt="Arcane-Comet">
+						<img src="https://i.ibb.co/JjHP7Tp/Phase-Rush.png" alt="Phase-Rush">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/M9xC5YS/Grasp-Of-The-Undying.png" alt="Grasp-Of-The-Undying">
+						<img src="https://i.ibb.co/8j2SZSW/Veteran-Aftershock.png" alt="Veteran-Aftershock">
+						<img src="https://i.ibb.co/k1dMfVB/Guardian.png" alt="Guardian">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/jRyxg4X/Glacial-Augment.png" alt="Glacial-Augment">
+						<img src="https://i.ibb.co/1Qxzm5s/Unsealed-Spellbook.png" alt="Unsealed-Spellbook">
+						<img src="https://i.ibb.co/k3vgDLL/8369.png" alt="8369">
+					</td>
+							</tr>
+							<tr>
+					<td>
+						<img src="https://i.ibb.co/2v47xNh/Overheal.png" alt="Overheal">
+						<img src="https://i.ibb.co/56k7tFY/Triumph.png" alt="Triumph">
+						<img src="https://i.ibb.co/ySjDNTS/Presence-Of-Mind.png" alt="Presence-Of-Mind">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/bPgr4T7/Cheap-Shot.png" alt="Cheap-Shot">
+						<img src="https://i.ibb.co/k54PzmN/Taste-Of-Blood.png" alt="Taste-Of-Blood">
+						<img src="https://i.ibb.co/j4zpbQC/Sudden-Impact.png" alt="Sudden-Impact">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/3BhctkJ/Pokeshield.png" alt="Pokeshield">
+						<img src="https://i.ibb.co/RCWXVDW/Manaflow-Band.png" alt="Manaflow-Band">
+						<img src="https://i.ibb.co/1qGrwjc/6361.png" alt="6361">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/ZYw7Rgq/Demolish.png" alt="Demolish">
+						<img src="https://i.ibb.co/Wf0SDpn/Font-Of-Life.png" alt="Font-Of-Life">
+						<img src="https://i.ibb.co/68Wdzr4/Mirror-Shell.png" alt="Mirror-Shell">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/cJ7nYMv/Hextech-Flashtraption.png" alt="Hextech-Flashtraption">
+						<img src="https://i.ibb.co/3WmRy39/Magical-Footwear.png" alt="Magical-Footwear">
+						<img src="https://i.ibb.co/hV02PB1/Perfect-Timing.png" alt="Perfect-Timing">
+					</td>
+							</tr>
+							<tr>
+					<td><img src="https://i.ibb.co/mD6NWMm/Legend-Alacrity.png" alt="Legend-Alacrity">
+						<img src="https://i.ibb.co/TwGTD0z/Legend-Tenacity.png" alt="Legend-Tenacity">
+						<img src="https://i.ibb.co/vszsD0N/Legend-Bloodline.png" alt="Legend-Bloodline">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/VxQjZL8/Zombie-Ward.png" alt="Zombie-Ward">
+						<img src="https://i.ibb.co/SRRSvVG/Ghost-Poro.png" alt="Ghost-Poro">
+						<img src="https://i.ibb.co/SPHyDCt/Eyeball-Collection.png" alt="Eyeball-Collection">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/gZqRCZ8/Transcendence.png" alt="Transcendence">
+						<img src="https://i.ibb.co/bvBPs24/Celerity-Temp.png" alt="Celerity-Temp">
+						<img src="https://i.ibb.co/pX7mJX8/Absolute-Focus.png" alt="Absolute-Focus">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/M9fMBnd/Conditioning.png" alt="Conditioning">
+						<img src="https://i.ibb.co/QNgkvvj/Second-Wind.png" alt="Second-Wind">
+						<img src="https://i.ibb.co/mRNW3SG/Bone-Plating.png" alt="Bone-Plating">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/ck5cfPK/Futures-Market.png" alt="Futures-Market">
+						<img src="https://i.ibb.co/9HWC3XF/Minion-Dematerializer.png" alt="Minion-Dematerializer">
+						<img src="https://i.ibb.co/1ZrBs53/Biscuit-Delivery.png" alt="Biscuit-Delivery">
+					</td>
+					</tr>
+					<tr>
+					<td>
+						<img src="https://i.ibb.co/x6VjTRQ/Coup-De-Grace.png" alt="Coup-De-Grace">
+						<img src="https://i.ibb.co/1X8sxXf/CutDown.png" alt="CutDown">
+						<img src="https://i.ibb.co/jHDswHz/Last-Stand.png" alt="Last-Stand">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/kg3fx1V/8135.png" alt="8135">
+						<img src="https://i.ibb.co/F4mdzdM/Ingenious-Hunter.png" alt="Ingenious-Hunter">
+						<img src="https://i.ibb.co/MkKtW75/Relentless-Hunter.png" alt="Relentless-Hunter">
+						<img src="https://i.ibb.co/prZNLdC/Ultimate-Hunter.png" alt="Ultimate-Hunter">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/VvBJsf1/Scorch.png" alt="Scorch" border="0">
+						<img src="https://i.ibb.co/LpqpySS/Waterwalking.png" alt="Waterwalking">
+						<img src="https://i.ibb.co/D1kj8Ym/Gathering-Storm.png" alt="Gathering-Storm">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/pLmhM1f/Overgrowth.png" alt="Overgrowth">
+						<img src="https://i.ibb.co/L8pYJJj/Revitalize.png" alt="Revitalize">
+						<img src="https://i.ibb.co/YkW1thP/Unflinching.png" alt="Unflinching">
+					</td>
+					<td>
+						<img src="https://i.ibb.co/ZxKbpym/Cosmic-Insight.png" alt="Cosmic-Insight">
+						<img src="https://i.ibb.co/TknRYh0/Approach-Velocity.png" alt="Approach-Velocity">
+						<img src="https://i.ibb.co/DVW8Fbb/Time-Warp-Tonic.png" alt="Time-Warp-Tonic">
+					</td>
+				</tr>
+			</table>
+			<p id="demo">carregar json...</p>	
+			<p id="resultado"></p>
+		</div>	
+	<script type="text/javascript">
+		let imprunas, aux;
+		let campeao = 17;
+		var x = document.getElementById("mySelect");
+    document.getElementById('importado')
+      .addEventListener('change', function() { 
+      var fr=new FileReader();
+      fr.onload=function(){
+      	imprunas = JSON.parse(fr.result);
+      	for (var i = 0; i < imprunas.length; i++) {
+      		var option = document.createElement("option");
+  				option.text = imprunas[i].name;
+  				x.add(option);
+      	}     	
+      }
+      fr.readAsText(this.files[0]);
+    })
+  </script>	
+	</body>
+</html>
